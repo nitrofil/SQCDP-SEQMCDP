@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>ACCUEIL</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/Projects-Clean.css">
+    <link rel="stylesheet" href="assets/css/Sidebar-Menu-1.css">
+    <link rel="stylesheet" href="assets/css/Sidebar-Menu.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+<script>
+function timeDisp(){
+let nowdate=new Date();
+document.getElementById('horloge').innerHTML=(nowdate.getHours()>9?nowdate.getHours():'0'+nowdate.getHours())+':'+(nowdate.getMinutes()>9?nowdate.getMinutes():'0'+nowdate.getMinutes())+':'+(nowdate.getSeconds()>9?nowdate.getSeconds():'0'+nowdate.getSeconds());
+}
+setInterval(timeDisp, 1000);//-- précision horloge à la seconde
+</script>		
+</head>
+
+<body>
+<body background="assets/img/FONDO.jpg"><background-attachment: fixed;>
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+          <li class="sidebar-brand"> <a href="index.html">ACCUEIL</a></li>
+		  <li><a>&nbsp;</a></li>
+          <li><a href="S.html">Sécurité</a></li>
+		  <li><a href="E.html">Environnement</a></li>
+          <li><a href="Q.html">Qualité</a></li>
+          <li><a href="M.html">Maintenance</a></li>
+          <li><a href="C.html">Coût</a></li>
+          <li><a href="D.html">Délai</a></li>
+          <li><a href="P.html">Personnel</a></li>
+		  <li><a>&nbsp;</a></li>
+		  <li><a>&nbsp;</a></li>
+		  <li><a>&nbsp;</a></li>
+		  <li><a>&nbsp;</a></li>
+		  <li><a href="CAL.html">Calendrier</a></li>
+		  <li><a>&nbsp;</a></li>
+		  <li><a>&nbsp;</a></li>
+		  <li><a>&nbsp;</a></li>
+		   <li><a>&nbsp;</a></li>
+		    <li><a>&nbsp;</a></li>
+		  <li><a href="APROPOS.html" target="popup" onclick="window.open('','popup','width=770,height=900,left=600,top=100,resizable=no,scrollbars=no,toolbar=no,menubar=no,location=no,status=no')">A propos</a></li>
+          </li>
+            </ul>
+        </div>
+        <div class="page-content-wrapper">
+            <div class="container-fluid border-dark"><a class="btn btn-link" role="button" id="menu-toggle" href="#menu-toggle"><i class="fa fa-bars"></i></a>
+                <h2>SEQMCDP<small> &nbsp;</small> &nbsp;<div class="pull-right"><span class="badge badge-pill badge-light" style="float:none;margin-bottom:0px;margin-left:0px;margin-top:0px;font-size:25px">&nbsp;<span id=horloge + &nbsp;></span>&nbsp;</span></h2>
+                <p class="text-capitalize text-left d-xl-flex align-items-xl-start">By nitrofil</p>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><img class="img-fluid bg-dark border rounded-0 border-dark shadow float-right" src="assets/img/ensemble-assembler.jpg" loading="auto">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/Sidebar-Menu.js"></script>
+
+
+</body>
+
+</html>

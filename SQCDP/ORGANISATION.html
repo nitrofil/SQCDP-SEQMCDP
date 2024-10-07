@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Organisation de production</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/Projects-Clean.css">
+    <link rel="stylesheet" href="assets/css/Sidebar-Menu-1.css">
+    <link rel="stylesheet" href="assets/css/Sidebar-Menu.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.3.0/exceljs.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+<script>	
+</script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+
+
+<body>
+<body style="background-color: #F8F8F8";>
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+          <li class="sidebar-brand"> <a href="index.html">ACCUEIL</a></li>
+		  <li><a>&nbsp;</a></li>
+          <li><a href="S.html">Sécurité</a></li>
+		  <li><a href="E.html">Environnement</a></li>
+          <li><a href="Q.html">Qualité</a></li>
+          <li><a href="M.html">Maintenance</a></li>
+          <li><a href="C.html">Coût</a></li>
+          <li><a href="D.html">Délai</a></li>
+          <li><a href="P.html">Personnel</a></li>
+		  <li><a>&nbsp;</a></li>
+		  <li><a>&nbsp;</a></li>
+		  <li><a>&nbsp;</a></li>
+		  <li><a href="CAL.html">Calendrier</a></li>
+		  <li><a>&nbsp;</a></li>
+		  <li><a>&nbsp;</a></li>
+		  <li><a>&nbsp;</a></li>
+		   <li><a>&nbsp;</a></li>
+		    <li><a>&nbsp;</a></li>
+		  <li><a href="APROPOS.html" target="popup" onclick="window.open('','popup','width=770,height=900,left=600,top=100,resizable=no,scrollbars=no,toolbar=no,menubar=no,location=no,status=no')">A propos</a></li>
+          </li>
+            </ul>
+        </div>
+		
+		
+		
+        <div class="page-content-wrapper">
+            <div class="container-fluid border-dark"><a class="btn btn-link" role="button" id="menu-toggle" href="#menu-toggle"><i class="fa fa-bars"></i></a>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div>
+    
+
+ <style>
+.containerMachine_1 {
+	display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 80px; /* Déplace vers le bas */	
+}
+
+.containerMachine_2 {
+	display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 120px; /* Déplace vers le bas */	
+}
+
+.containerMachine_3 {
+	display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 120px; /* Déplace vers le bas */	
+}
+
+.image-container {
+    position: relative;
+    margin-right: 300px; /* Ajoute une marge à droite */
+    margin-left: -180px; /* Déplace vers la gauche */
+}
+
+.image-container img {
+    width: auto;
+    height: auto;
+	pointer-events:none;
+}
+
+.text-input {
+	    z-index: 1; /* Définir un index de position supérieur */
+        background-color: transparent; /* #f8f8f8 Fond gris clair */
+        /*border: none;  Supprimer la bordure */
+        text-align: center; /* Centrer le texte */
+	font-size: 18px; /* Taille de la police */
+	font-weight: bold;
+    color: blue; /* Couleur de la police */
+	width: 90px;/* largeur input */
+	height: 30px;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -10px; /* Déplace vers le haut */
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Ajout de l'ombre portée */
+}
+	
+.containerCercles_1 {
+	display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px; /* Déplace vers le bas */	
+}
+
+.containerCercles_2 {
+	display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px; /* Déplace vers le bas */	
+}
+
+.containerCercles_3 {
+	display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px; /* Déplace vers le bas */	
+}
+
+ .operateurA {
+            width: 40px;
+            height: 40px;
+            background-color: green;
+            border-radius: 50%; /* Pour faire un cercle */
+            display: inline-block; /* Pour s'assurer que le texte ne saute pas */
+            cursor: pointer; /* Ajout du curseur pointer */
+            position: relative; /* Ajout de la position relative */
+            z-index: 1; /* Définir un index de position supérieur */
+            border: 1px solid black; /* Ajout de la bordure */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Ajout de l'ombre portée */
+			margin-right: 0px; /* Ajoute une marge à droite */
+			margin-left: -218px; /* Déplace vers la gauche */
+        }
+		
+		.operateurB {
+            width: 40px;
+            height: 40px;
+            background-color: green;
+            border-radius: 50%; /* Pour faire un cercle */
+            display: inline-block; /* Pour s'assurer que le texte ne saute pas */
+            cursor: pointer; /* Ajout du curseur pointer */
+            position: relative; /* Ajout de la position relative */
+            z-index: 1; /* Définir un index de position supérieur */
+            border: 1px solid black; /* Ajout de la bordure */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Ajout de l'ombre portée */
+			margin-right: 0px; /* Ajoute une marge à droite */
+			left: 40px; /* Déplace vers la gauche */
+        }
+		
+		.operateurC {
+            width: 40px;
+            height: 40px;
+            background-color: green;
+            border-radius: 50%; /* Pour faire un cercle */
+            display: inline-block; /* Pour s'assurer que le texte ne saute pas */
+            cursor: pointer; /* Ajout du curseur pointer */
+            position: relative; /* Ajout de la position relative */
+            z-index: 1; /* Définir un index de position supérieur */
+            border: 1px solid black; /* Ajout de la bordure */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Ajout de l'ombre portée */
+			margin-right: 0px; /* Ajoute une marge à droite */
+			left: 82px; /* Déplace vers la gauche */
+        }
+		
+		.operateurD {
+            width: 40px;
+            height: 40px;
+            background-color: green;
+            border-radius: 50%; /* Pour faire un cercle */
+            display: inline-block; /* Pour s'assurer que le texte ne saute pas */
+            cursor: pointer; /* Ajout du curseur pointer */
+            position: relative; /* Ajout de la position relative */
+            z-index: 1; /* Définir un index de position supérieur */
+            border: 1px solid black; /* Ajout de la bordure */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Ajout de l'ombre portée */
+			margin-right: 0px; /* Ajoute une marge à droite */
+			left: 122px; /* Déplace vers la gauche */
+        }
+		
+		.operateurE {
+            width: 40px;
+            height: 40px;
+            background-color: green;
+            border-radius: 50%; /* Pour faire un cercle */
+            display: inline-block; /* Pour s'assurer que le texte ne saute pas */
+            cursor: pointer; /* Ajout du curseur pointer */
+            position: relative; /* Ajout de la position relative */
+            z-index: 1; /* Définir un index de position supérieur */
+            border: 1px solid black; /* Ajout de la bordure */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Ajout de l'ombre portée */
+			margin-right: 0px; /* Ajoute une marge à droite */
+			left: 164px; /* Déplace vers la gauche */
+        }
+
+		.operateurF {
+            width: 40px;
+            height: 40px;
+            background-color: green;
+            border-radius: 50%; /* Pour faire un cercle */
+            display: inline-block; /* Pour s'assurer que le texte ne saute pas */
+            cursor: pointer; /* Ajout du curseur pointer */
+            position: relative; /* Ajout de la position relative */
+            z-index: 1; /* Définir un index de position supérieur */
+            border: 1px solid black; /* Ajout de la bordure */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Ajout de l'ombre portée */
+			margin-right: 0px; /* Ajoute une marge à droite */
+			margin-left: -218px; /* Déplace vers la gauche */
+        }
+		
+		.operateurG {
+            width: 40px;
+            height: 40px;
+            background-color: green;
+            border-radius: 50%; /* Pour faire un cercle */
+            display: inline-block; /* Pour s'assurer que le texte ne saute pas */
+            cursor: pointer; /* Ajout du curseur pointer */
+            position: relative; /* Ajout de la position relative */
+            z-index: 1; /* Définir un index de position supérieur */
+            border: 1px solid black; /* Ajout de la bordure */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Ajout de l'ombre portée */
+			margin-right: 0px; /* Ajoute une marge à droite */
+			left: 40px; /* Déplace vers la gauche */
+        }
+		
+		.operateurH {
+            width: 40px;
+            height: 40px;
+            background-color: green;
+            border-radius: 50%; /* Pour faire un cercle */
+            display: inline-block; /* Pour s'assurer que le texte ne saute pas */
+            cursor: pointer; /* Ajout du curseur pointer */
+            position: relative; /* Ajout de la position relative */
+            z-index: 1; /* Définir un index de position supérieur */
+            border: 1px solid black; /* Ajout de la bordure */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Ajout de l'ombre portée */
+			margin-right: 0px; /* Ajoute une marge à droite */
+			left: 82px; /* Déplace vers la gauche */
+        }
+		
+		.operateurI {
+            width: 40px;
+            height: 40px;
+            background-color: green;
+            border-radius: 50%; /* Pour faire un cercle */
+            display: inline-block; /* Pour s'assurer que le texte ne saute pas */
+            cursor: pointer; /* Ajout du curseur pointer */
+            position: relative; /* Ajout de la position relative */
+            z-index: 1; /* Définir un index de position supérieur */
+            border: 1px solid black; /* Ajout de la bordure */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Ajout de l'ombre portée */
+			margin-right: 0px; /* Ajoute une marge à droite */
+			left: 122px; /* Déplace vers la gauche */
+        }
+		
+		.operateurJ {
+            width: 40px;
+            height: 40px;
+            background-color: green;
+            border-radius: 50%; /* Pour faire un cercle */
+            display: inline-block; /* Pour s'assurer que le texte ne saute pas */
+            cursor: pointer; /* Ajout du curseur pointer */
+            position: relative; /* Ajout de la position relative */
+            z-index: 1; /* Définir un index de position supérieur */
+            border: 1px solid black; /* Ajout de la bordure */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Ajout de l'ombre portée */
+			margin-right: 0px; /* Ajoute une marge à droite */
+			left: 164px; /* Déplace vers la gauche */
+        }
+
+		.operateurK {
+            width: 40px;
+            height: 40px;
+            background-color: green;
+            border-radius: 50%; /* Pour faire un cercle */
+            display: inline-block; /* Pour s'assurer que le texte ne saute pas */
+            cursor: pointer; /* Ajout du curseur pointer */
+            position: relative; /* Ajout de la position relative */
+            z-index: 1; /* Définir un index de position supérieur */
+            border: 1px solid black; /* Ajout de la bordure */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Ajout de l'ombre portée */
+			margin-right: 0px; /* Ajoute une marge à droite */
+			left: -198px; /* Déplace vers la gauche */
+        }
+
+		.operateurL {
+            width: 40px;
+            height: 40px;
+            background-color: green;
+            border-radius: 50%; /* Pour faire un cercle */
+            display: inline-block; /* Pour s'assurer que le texte ne saute pas */
+            cursor: pointer; /* Ajout du curseur pointer */
+            position: relative; /* Ajout de la position relative */
+            z-index: 1; /* Définir un index de position supérieur */
+            border: 1px solid black; /* Ajout de la bordure */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Ajout de l'ombre portée */
+			margin-right: 0px; /* Ajoute une marge à droite */
+			left: -114px; /* Déplace vers la gauche */
+        }
+
+		.operateurM {
+            width: 40px;
+            height: 40px;
+            background-color: green;
+            border-radius: 50%; /* Pour faire un cercle */
+            display: inline-block; /* Pour s'assurer que le texte ne saute pas */
+            cursor: pointer; /* Ajout du curseur pointer */
+            position: relative; /* Ajout de la position relative */
+            z-index: 1; /* Définir un index de position supérieur */
+            border: 1px solid black; /* Ajout de la bordure */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Ajout de l'ombre portée */
+			margin-right: 0px; /* Ajoute une marge à droite */
+			left: -30px; /* Déplace vers la gauche */
+        }
+
+		.operateurN {
+            width: 40px;
+            height: 40px;
+            background-color: green;
+            border-radius: 50%; /* Pour faire un cercle */
+            display: inline-block; /* Pour s'assurer que le texte ne saute pas */
+            cursor: pointer; /* Ajout du curseur pointer */
+            position: relative; /* Ajout de la position relative */
+            z-index: 1; /* Définir un index de position supérieur */
+            border: 1px solid black; /* Ajout de la bordure */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Ajout de l'ombre portée */
+			margin-right: 0px; /* Ajoute une marge à droite */
+			left: 60px; /* Déplace vers la gauche */
+        }
+
+		.operateurO {
+            width: 40px;
+            height: 40px;
+            background-color: green;
+            border-radius: 50%; /* Pour faire un cercle */
+            display: inline-block; /* Pour s'assurer que le texte ne saute pas */
+            cursor: pointer; /* Ajout du curseur pointer */
+            position: relative; /* Ajout de la position relative */
+            z-index: 1; /* Définir un index de position supérieur */
+            border: 1px solid black; /* Ajout de la bordure */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Ajout de l'ombre portée */
+			margin-right: 0px; /* Ajoute une marge à droite */
+			left: 140px; /* Déplace vers la gauche */
+        }
+
+        #canvas {
+            position: absolute;
+            top: 0;
+            left: 20;
+            border: 1px solid black; /* Ajouter une bordure au canevas */
+        }
+
+        .erase-button {
+            position: absolute;
+			width: 22px;
+            height: 22px;
+            /*background-color: red; */
+            /*border: none; */
+            color: red;
+            padding: 0px 5px 5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+			font-weight: bold;			
+            margin: 0;
+            cursor: pointer;
+        }
+    </style>
+	
+
+    <div class="container">
+	
+
+	
+	
+   <div class="containerMachine_1">
+	<div class="image-container">
+      <img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALsAAABYCAMAAACannZ0AAAABGdBTUEAALGPC/xhBQAAAwBQTFRFAAAAQEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARJIDZQAAAQB0Uk5T////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AFP3ByUAAAAJcEhZcwAADr8AAA6/ATgFUyQAAAAYdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My4zNqnn4iUAAAHVSURBVHhe7ZJRjsIwDAV3739owO6QJsQi1KGFojcfq8j2s0ds/y7nRe6fQe5j/h+gPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDzFb7mz/Nu5mf6aO49v5jh3fqoHaKaI3Fmbgx099B+gmeJIdx4Ve7jz2I7cX+Tt7k9gpoJGCrlXPInG7jw2Y0lPy93g/3mHqhNtzV+ypKflbjTRdk+0NX/Jkp6Wu9FE268m2pq/ZElPy91oonKPsaSnd3SPYWDikiU9LXejiTaaFWsxf8mSnpa70URP7x7CwMQlS3pa7kYTrS3jrflLlvT0yd3tzsrST9BE203R1vwlS3pa7kYTbfdEW/OXLOlpuRvk71B1oq35S5b09J7uvHqWcfubwZKe3umbcdjYszR9JoElPS13o4+ysWdp+kwCS3p6t+/9GRvHO1Z3KPUk5F9h43jHDu48CmzsWZo+kyR2n4BFBco9S9NnkvykO4X3Ea2UOyC+D9yooJHmtkLuQ7hRQWMbZEHuQ7hRQWMbZOEg9zeBKsj9KFAFuR8FqiD3o0AVVvfzIffPIPdPcLlcAcv2v1IG1A0HAAAAAElFTkSuQmCC"img>
+	  <input type="text" class="text-input" id="text-input_1" placeholder="Texte 1">
+    </div>
+    <div class="image-container">
+     <img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALsAAABYCAMAAACannZ0AAAABGdBTUEAALGPC/xhBQAAAwBQTFRFAAAAQEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARJIDZQAAAQB0Uk5T////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AFP3ByUAAAAJcEhZcwAADr8AAA6/ATgFUyQAAAAYdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My4zNqnn4iUAAAHVSURBVHhe7ZJRjsIwDAV3739owO6QJsQi1KGFojcfq8j2s0ds/y7nRe6fQe5j/h+gPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDzFb7mz/Nu5mf6aO49v5jh3fqoHaKaI3Fmbgx099B+gmeJIdx4Ve7jz2I7cX+Tt7k9gpoJGCrlXPInG7jw2Y0lPy93g/3mHqhNtzV+ypKflbjTRdk+0NX/Jkp6Wu9FE268m2pq/ZElPy91oonKPsaSnd3SPYWDikiU9LXejiTaaFWsxf8mSnpa70URP7x7CwMQlS3pa7kYTrS3jrflLlvT0yd3tzsrST9BE203R1vwlS3pa7kYTbfdEW/OXLOlpuRvk71B1oq35S5b09J7uvHqWcfubwZKe3umbcdjYszR9JoElPS13o4+ysWdp+kwCS3p6t+/9GRvHO1Z3KPUk5F9h43jHDu48CmzsWZo+kyR2n4BFBco9S9NnkvykO4X3Ea2UOyC+D9yooJHmtkLuQ7hRQWMbZEHuQ7hRQWMbZOEg9zeBKsj9KFAFuR8FqiD3o0AVVvfzIffPIPdPcLlcAcv2v1IG1A0HAAAAAElFTkSuQmCC"img>
+	  <input type="text" class="text-input" id="text-input_2" placeholder="Texte 2">
+    </div>
+    <div class="image-container">
+      <img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALsAAABYCAMAAACannZ0AAAABGdBTUEAALGPC/xhBQAAAwBQTFRFAAAAQEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARJIDZQAAAQB0Uk5T////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AFP3ByUAAAAJcEhZcwAADr8AAA6/ATgFUyQAAAAYdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My4zNqnn4iUAAAHVSURBVHhe7ZJRjsIwDAV3739owO6QJsQi1KGFojcfq8j2s0ds/y7nRe6fQe5j/h+gPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDzFb7mz/Nu5mf6aO49v5jh3fqoHaKaI3Fmbgx099B+gmeJIdx4Ve7jz2I7cX+Tt7k9gpoJGCrlXPInG7jw2Y0lPy93g/3mHqhNtzV+ypKflbjTRdk+0NX/Jkp6Wu9FE268m2pq/ZElPy91oonKPsaSnd3SPYWDikiU9LXejiTaaFWsxf8mSnpa70URP7x7CwMQlS3pa7kYTrS3jrflLlvT0yd3tzsrST9BE203R1vwlS3pa7kYTbfdEW/OXLOlpuRvk71B1oq35S5b09J7uvHqWcfubwZKe3umbcdjYszR9JoElPS13o4+ysWdp+kwCS3p6t+/9GRvHO1Z3KPUk5F9h43jHDu48CmzsWZo+kyR2n4BFBco9S9NnkvykO4X3Ea2UOyC+D9yooJHmtkLuQ7hRQWMbZEHuQ7hRQWMbZOEg9zeBKsj9KFAFuR8FqiD3o0AVVvfzIffPIPdPcLlcAcv2v1IG1A0HAAAAAElFTkSuQmCC"img>
+
+	  <input type="text" class="text-input" id="text-input_3" placeholder="Texte 3">
+    </div>
+    <div class="image-container">
+      <img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALsAAABYCAMAAACannZ0AAAABGdBTUEAALGPC/xhBQAAAwBQTFRFAAAAQEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARJIDZQAAAQB0Uk5T////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AFP3ByUAAAAJcEhZcwAADr8AAA6/ATgFUyQAAAAYdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My4zNqnn4iUAAAHVSURBVHhe7ZJRjsIwDAV3739owO6QJsQi1KGFojcfq8j2s0ds/y7nRe6fQe5j/h+gPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDzFb7mz/Nu5mf6aO49v5jh3fqoHaKaI3Fmbgx099B+gmeJIdx4Ve7jz2I7cX+Tt7k9gpoJGCrlXPInG7jw2Y0lPy93g/3mHqhNtzV+ypKflbjTRdk+0NX/Jkp6Wu9FE268m2pq/ZElPy91oonKPsaSnd3SPYWDikiU9LXejiTaaFWsxf8mSnpa70URP7x7CwMQlS3pa7kYTrS3jrflLlvT0yd3tzsrST9BE203R1vwlS3pa7kYTbfdEW/OXLOlpuRvk71B1oq35S5b09J7uvHqWcfubwZKe3umbcdjYszR9JoElPS13o4+ysWdp+kwCS3p6t+/9GRvHO1Z3KPUk5F9h43jHDu48CmzsWZo+kyR2n4BFBco9S9NnkvykO4X3Ea2UOyC+D9yooJHmtkLuQ7hRQWMbZEHuQ7hRQWMbZOEg9zeBKsj9KFAFuR8FqiD3o0AVVvfzIffPIPdPcLlcAcv2v1IG1A0HAAAAAElFTkSuQmCC"img>
+
+	  <input type="text" class="text-input" id="text-input_4" placeholder="Texte 4">
+    </div>
+    <div class="image-container">
+      <img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALsAAABYCAMAAACannZ0AAAABGdBTUEAALGPC/xhBQAAAwBQTFRFAAAAQEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARJIDZQAAAQB0Uk5T////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AFP3ByUAAAAJcEhZcwAADr8AAA6/ATgFUyQAAAAYdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My4zNqnn4iUAAAHVSURBVHhe7ZJRjsIwDAV3739owO6QJsQi1KGFojcfq8j2s0ds/y7nRe6fQe5j/h+gPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDzFb7mz/Nu5mf6aO49v5jh3fqoHaKaI3Fmbgx099B+gmeJIdx4Ve7jz2I7cX+Tt7k9gpoJGCrlXPInG7jw2Y0lPy93g/3mHqhNtzV+ypKflbjTRdk+0NX/Jkp6Wu9FE268m2pq/ZElPy91oonKPsaSnd3SPYWDikiU9LXejiTaaFWsxf8mSnpa70URP7x7CwMQlS3pa7kYTrS3jrflLlvT0yd3tzsrST9BE203R1vwlS3pa7kYTbfdEW/OXLOlpuRvk71B1oq35S5b09J7uvHqWcfubwZKe3umbcdjYszR9JoElPS13o4+ysWdp+kwCS3p6t+/9GRvHO1Z3KPUk5F9h43jHDu48CmzsWZo+kyR2n4BFBco9S9NnkvykO4X3Ea2UOyC+D9yooJHmtkLuQ7hRQWMbZEHuQ7hRQWMbZOEg9zeBKsj9KFAFuR8FqiD3o0AVVvfzIffPIPdPcLlcAcv2v1IG1A0HAAAAAElFTkSuQmCC"img>
+	  <input type="text" class="text-input" id="text-input_5" placeholder="Texte 5">
+    </div>	
+  </div>
+
+    <div class="containerCercles_1">
+        <div class="operateurA" id="operateurA"></div>
+		
+		<div class="operateurB" id="operateurB"></div>
+		
+		<div class="operateurC" id="operateurC"></div>
+		
+		<div class="operateurD" id="operateurD"></div>
+		
+		<div class="operateurE" id="operateurE"></div>
+    </div>
+
+   <div class="containerMachine_2">
+	<div class="image-container">
+      <img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALsAAABYCAMAAACannZ0AAAABGdBTUEAALGPC/xhBQAAAwBQTFRFAAAAQEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARJIDZQAAAQB0Uk5T////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AFP3ByUAAAAJcEhZcwAADr8AAA6/ATgFUyQAAAAYdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My4zNqnn4iUAAAHVSURBVHhe7ZJRjsIwDAV3739owO6QJsQi1KGFojcfq8j2s0ds/y7nRe6fQe5j/h+gPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDzFb7mz/Nu5mf6aO49v5jh3fqoHaKaI3Fmbgx099B+gmeJIdx4Ve7jz2I7cX+Tt7k9gpoJGCrlXPInG7jw2Y0lPy93g/3mHqhNtzV+ypKflbjTRdk+0NX/Jkp6Wu9FE268m2pq/ZElPy91oonKPsaSnd3SPYWDikiU9LXejiTaaFWsxf8mSnpa70URP7x7CwMQlS3pa7kYTrS3jrflLlvT0yd3tzsrST9BE203R1vwlS3pa7kYTbfdEW/OXLOlpuRvk71B1oq35S5b09J7uvHqWcfubwZKe3umbcdjYszR9JoElPS13o4+ysWdp+kwCS3p6t+/9GRvHO1Z3KPUk5F9h43jHDu48CmzsWZo+kyR2n4BFBco9S9NnkvykO4X3Ea2UOyC+D9yooJHmtkLuQ7hRQWMbZEHuQ7hRQWMbZOEg9zeBKsj9KFAFuR8FqiD3o0AVVvfzIffPIPdPcLlcAcv2v1IG1A0HAAAAAElFTkSuQmCC"img>
+	
+	  <input type="text" class="text-input" id="text-input_6" placeholder="Texte 6">
+    </div>
+    <div class="image-container">
+      <img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALsAAABYCAMAAACannZ0AAAABGdBTUEAALGPC/xhBQAAAwBQTFRFAAAAQEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARJIDZQAAAQB0Uk5T////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AFP3ByUAAAAJcEhZcwAADr8AAA6/ATgFUyQAAAAYdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My4zNqnn4iUAAAHVSURBVHhe7ZJRjsIwDAV3739owO6QJsQi1KGFojcfq8j2s0ds/y7nRe6fQe5j/h+gPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDzFb7mz/Nu5mf6aO49v5jh3fqoHaKaI3Fmbgx099B+gmeJIdx4Ve7jz2I7cX+Tt7k9gpoJGCrlXPInG7jw2Y0lPy93g/3mHqhNtzV+ypKflbjTRdk+0NX/Jkp6Wu9FE268m2pq/ZElPy91oonKPsaSnd3SPYWDikiU9LXejiTaaFWsxf8mSnpa70URP7x7CwMQlS3pa7kYTrS3jrflLlvT0yd3tzsrST9BE203R1vwlS3pa7kYTbfdEW/OXLOlpuRvk71B1oq35S5b09J7uvHqWcfubwZKe3umbcdjYszR9JoElPS13o4+ysWdp+kwCS3p6t+/9GRvHO1Z3KPUk5F9h43jHDu48CmzsWZo+kyR2n4BFBco9S9NnkvykO4X3Ea2UOyC+D9yooJHmtkLuQ7hRQWMbZEHuQ7hRQWMbZOEg9zeBKsj9KFAFuR8FqiD3o0AVVvfzIffPIPdPcLlcAcv2v1IG1A0HAAAAAElFTkSuQmCC"img>
+	
+	  <input type="text" class="text-input" id="text-input_7" placeholder="Texte 7">
+    </div>
+    <div class="image-container">
+      <img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALsAAABYCAMAAACannZ0AAAABGdBTUEAALGPC/xhBQAAAwBQTFRFAAAAQEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARJIDZQAAAQB0Uk5T////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AFP3ByUAAAAJcEhZcwAADr8AAA6/ATgFUyQAAAAYdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My4zNqnn4iUAAAHVSURBVHhe7ZJRjsIwDAV3739owO6QJsQi1KGFojcfq8j2s0ds/y7nRe6fQe5j/h+gPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDzFb7mz/Nu5mf6aO49v5jh3fqoHaKaI3Fmbgx099B+gmeJIdx4Ve7jz2I7cX+Tt7k9gpoJGCrlXPInG7jw2Y0lPy93g/3mHqhNtzV+ypKflbjTRdk+0NX/Jkp6Wu9FE268m2pq/ZElPy91oonKPsaSnd3SPYWDikiU9LXejiTaaFWsxf8mSnpa70URP7x7CwMQlS3pa7kYTrS3jrflLlvT0yd3tzsrST9BE203R1vwlS3pa7kYTbfdEW/OXLOlpuRvk71B1oq35S5b09J7uvHqWcfubwZKe3umbcdjYszR9JoElPS13o4+ysWdp+kwCS3p6t+/9GRvHO1Z3KPUk5F9h43jHDu48CmzsWZo+kyR2n4BFBco9S9NnkvykO4X3Ea2UOyC+D9yooJHmtkLuQ7hRQWMbZEHuQ7hRQWMbZOEg9zeBKsj9KFAFuR8FqiD3o0AVVvfzIffPIPdPcLlcAcv2v1IG1A0HAAAAAElFTkSuQmCC"img>
+	
+	  <input type="text" class="text-input" id="text-input_8" placeholder="Texte 8">
+    </div>
+    <div class="image-container">
+      <img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALsAAABYCAMAAACannZ0AAAABGdBTUEAALGPC/xhBQAAAwBQTFRFAAAAQEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARJIDZQAAAQB0Uk5T////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AFP3ByUAAAAJcEhZcwAADr8AAA6/ATgFUyQAAAAYdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My4zNqnn4iUAAAHVSURBVHhe7ZJRjsIwDAV3739owO6QJsQi1KGFojcfq8j2s0ds/y7nRe6fQe5j/h+gPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDzFb7mz/Nu5mf6aO49v5jh3fqoHaKaI3Fmbgx099B+gmeJIdx4Ve7jz2I7cX+Tt7k9gpoJGCrlXPInG7jw2Y0lPy93g/3mHqhNtzV+ypKflbjTRdk+0NX/Jkp6Wu9FE268m2pq/ZElPy91oonKPsaSnd3SPYWDikiU9LXejiTaaFWsxf8mSnpa70URP7x7CwMQlS3pa7kYTrS3jrflLlvT0yd3tzsrST9BE203R1vwlS3pa7kYTbfdEW/OXLOlpuRvk71B1oq35S5b09J7uvHqWcfubwZKe3umbcdjYszR9JoElPS13o4+ysWdp+kwCS3p6t+/9GRvHO1Z3KPUk5F9h43jHDu48CmzsWZo+kyR2n4BFBco9S9NnkvykO4X3Ea2UOyC+D9yooJHmtkLuQ7hRQWMbZEHuQ7hRQWMbZOEg9zeBKsj9KFAFuR8FqiD3o0AVVvfzIffPIPdPcLlcAcv2v1IG1A0HAAAAAElFTkSuQmCC"img>
+	
+	  <input type="text" class="text-input" id="text-input_9" placeholder="Texte 9">
+    </div>
+    <div class="image-container">
+      <img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALsAAABYCAMAAACannZ0AAAABGdBTUEAALGPC/xhBQAAAwBQTFRFAAAAQEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARJIDZQAAAQB0Uk5T////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AFP3ByUAAAAJcEhZcwAADr8AAA6/ATgFUyQAAAAYdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My4zNqnn4iUAAAHVSURBVHhe7ZJRjsIwDAV3739owO6QJsQi1KGFojcfq8j2s0ds/y7nRe6fQe5j/h+gPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDzFb7mz/Nu5mf6aO49v5jh3fqoHaKaI3Fmbgx099B+gmeJIdx4Ve7jz2I7cX+Tt7k9gpoJGCrlXPInG7jw2Y0lPy93g/3mHqhNtzV+ypKflbjTRdk+0NX/Jkp6Wu9FE268m2pq/ZElPy91oonKPsaSnd3SPYWDikiU9LXejiTaaFWsxf8mSnpa70URP7x7CwMQlS3pa7kYTrS3jrflLlvT0yd3tzsrST9BE203R1vwlS3pa7kYTbfdEW/OXLOlpuRvk71B1oq35S5b09J7uvHqWcfubwZKe3umbcdjYszR9JoElPS13o4+ysWdp+kwCS3p6t+/9GRvHO1Z3KPUk5F9h43jHDu48CmzsWZo+kyR2n4BFBco9S9NnkvykO4X3Ea2UOyC+D9yooJHmtkLuQ7hRQWMbZEHuQ7hRQWMbZOEg9zeBKsj9KFAFuR8FqiD3o0AVVvfzIffPIPdPcLlcAcv2v1IG1A0HAAAAAElFTkSuQmCC"img>
+	
+	  <input type="text" class="text-input" id="text-input_10" placeholder="Texte 10">
+    </div>	
+  </div>
+
+    <div class="containerCercles_2">
+        <div class="operateurF" id="operateurF"></div>
+		
+		<div class="operateurG" id="operateurG"></div>
+		
+		<div class="operateurH" id="operateurH"></div>
+		
+		<div class="operateurI" id="operateurI"></div>
+		
+		<div class="operateurJ" id="operateurJ"></div>
+    </div>	
+
+   <div class="containerMachine_3">
+	<div class="image-container">
+      <img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALsAAABYCAMAAACannZ0AAAABGdBTUEAALGPC/xhBQAAAwBQTFRFAAAAQEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARJIDZQAAAQB0Uk5T////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AFP3ByUAAAAJcEhZcwAADr8AAA6/ATgFUyQAAAAYdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My4zNqnn4iUAAAHVSURBVHhe7ZJRjsIwDAV3739owO6QJsQi1KGFojcfq8j2s0ds/y7nRe6fQe5j/h+gPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDzFb7mz/Nu5mf6aO49v5jh3fqoHaKaI3Fmbgx099B+gmeJIdx4Ve7jz2I7cX+Tt7k9gpoJGCrlXPInG7jw2Y0lPy93g/3mHqhNtzV+ypKflbjTRdk+0NX/Jkp6Wu9FE268m2pq/ZElPy91oonKPsaSnd3SPYWDikiU9LXejiTaaFWsxf8mSnpa70URP7x7CwMQlS3pa7kYTrS3jrflLlvT0yd3tzsrST9BE203R1vwlS3pa7kYTbfdEW/OXLOlpuRvk71B1oq35S5b09J7uvHqWcfubwZKe3umbcdjYszR9JoElPS13o4+ysWdp+kwCS3p6t+/9GRvHO1Z3KPUk5F9h43jHDu48CmzsWZo+kyR2n4BFBco9S9NnkvykO4X3Ea2UOyC+D9yooJHmtkLuQ7hRQWMbZEHuQ7hRQWMbZOEg9zeBKsj9KFAFuR8FqiD3o0AVVvfzIffPIPdPcLlcAcv2v1IG1A0HAAAAAElFTkSuQmCC"img>
+	
+	  <input type="text" class="text-input" id="text-input_11" placeholder="Texte 11">
+    </div>
+    <div class="image-container">
+      <img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALsAAABYCAMAAACannZ0AAAABGdBTUEAALGPC/xhBQAAAwBQTFRFAAAAQEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARJIDZQAAAQB0Uk5T////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AFP3ByUAAAAJcEhZcwAADr8AAA6/ATgFUyQAAAAYdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My4zNqnn4iUAAAHVSURBVHhe7ZJRjsIwDAV3739owO6QJsQi1KGFojcfq8j2s0ds/y7nRe6fQe5j/h+gPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDzFb7mz/Nu5mf6aO49v5jh3fqoHaKaI3Fmbgx099B+gmeJIdx4Ve7jz2I7cX+Tt7k9gpoJGCrlXPInG7jw2Y0lPy93g/3mHqhNtzV+ypKflbjTRdk+0NX/Jkp6Wu9FE268m2pq/ZElPy91oonKPsaSnd3SPYWDikiU9LXejiTaaFWsxf8mSnpa70URP7x7CwMQlS3pa7kYTrS3jrflLlvT0yd3tzsrST9BE203R1vwlS3pa7kYTbfdEW/OXLOlpuRvk71B1oq35S5b09J7uvHqWcfubwZKe3umbcdjYszR9JoElPS13o4+ysWdp+kwCS3p6t+/9GRvHO1Z3KPUk5F9h43jHDu48CmzsWZo+kyR2n4BFBco9S9NnkvykO4X3Ea2UOyC+D9yooJHmtkLuQ7hRQWMbZEHuQ7hRQWMbZOEg9zeBKsj9KFAFuR8FqiD3o0AVVvfzIffPIPdPcLlcAcv2v1IG1A0HAAAAAElFTkSuQmCC"img>
+	
+	  <input type="text" class="text-input" id="text-input_12" placeholder="Texte 12">
+    </div>
+    <div class="image-container">
+      <img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALsAAABYCAMAAACannZ0AAAABGdBTUEAALGPC/xhBQAAAwBQTFRFAAAAQEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARJIDZQAAAQB0Uk5T////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AFP3ByUAAAAJcEhZcwAADr8AAA6/ATgFUyQAAAAYdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My4zNqnn4iUAAAHVSURBVHhe7ZJRjsIwDAV3739owO6QJsQi1KGFojcfq8j2s0ds/y7nRe6fQe5j/h+gPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDzFb7mz/Nu5mf6aO49v5jh3fqoHaKaI3Fmbgx099B+gmeJIdx4Ve7jz2I7cX+Tt7k9gpoJGCrlXPInG7jw2Y0lPy93g/3mHqhNtzV+ypKflbjTRdk+0NX/Jkp6Wu9FE268m2pq/ZElPy91oonKPsaSnd3SPYWDikiU9LXejiTaaFWsxf8mSnpa70URP7x7CwMQlS3pa7kYTrS3jrflLlvT0yd3tzsrST9BE203R1vwlS3pa7kYTbfdEW/OXLOlpuRvk71B1oq35S5b09J7uvHqWcfubwZKe3umbcdjYszR9JoElPS13o4+ysWdp+kwCS3p6t+/9GRvHO1Z3KPUk5F9h43jHDu48CmzsWZo+kyR2n4BFBco9S9NnkvykO4X3Ea2UOyC+D9yooJHmtkLuQ7hRQWMbZEHuQ7hRQWMbZOEg9zeBKsj9KFAFuR8FqiD3o0AVVvfzIffPIPdPcLlcAcv2v1IG1A0HAAAAAElFTkSuQmCC"img>
+	
+	  <input type="text" class="text-input" id="text-input_13" placeholder="Texte 13">
+    </div>
+    <div class="image-container">
+      <img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALsAAABYCAMAAACannZ0AAAABGdBTUEAALGPC/xhBQAAAwBQTFRFAAAAQEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARJIDZQAAAQB0Uk5T////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AFP3ByUAAAAJcEhZcwAADr8AAA6/ATgFUyQAAAAYdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My4zNqnn4iUAAAHVSURBVHhe7ZJRjsIwDAV3739owO6QJsQi1KGFojcfq8j2s0ds/y7nRe6fQe5j/h+gPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDzFb7mz/Nu5mf6aO49v5jh3fqoHaKaI3Fmbgx099B+gmeJIdx4Ve7jz2I7cX+Tt7k9gpoJGCrlXPInG7jw2Y0lPy93g/3mHqhNtzV+ypKflbjTRdk+0NX/Jkp6Wu9FE268m2pq/ZElPy91oonKPsaSnd3SPYWDikiU9LXejiTaaFWsxf8mSnpa70URP7x7CwMQlS3pa7kYTrS3jrflLlvT0yd3tzsrST9BE203R1vwlS3pa7kYTbfdEW/OXLOlpuRvk71B1oq35S5b09J7uvHqWcfubwZKe3umbcdjYszR9JoElPS13o4+ysWdp+kwCS3p6t+/9GRvHO1Z3KPUk5F9h43jHDu48CmzsWZo+kyR2n4BFBco9S9NnkvykO4X3Ea2UOyC+D9yooJHmtkLuQ7hRQWMbZEHuQ7hRQWMbZOEg9zeBKsj9KFAFuR8FqiD3o0AVVvfzIffPIPdPcLlcAcv2v1IG1A0HAAAAAElFTkSuQmCC"img>
+	
+	  <input type="text" class="text-input" id="text-input_14" placeholder="Texte 14">
+    </div>
+    <div class="image-container">
+      <img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALsAAABYCAMAAACannZ0AAAABGdBTUEAALGPC/xhBQAAAwBQTFRFAAAAQEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARJIDZQAAAQB0Uk5T////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AFP3ByUAAAAJcEhZcwAADr8AAA6/ATgFUyQAAAAYdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My4zNqnn4iUAAAHVSURBVHhe7ZJRjsIwDAV3739owO6QJsQi1KGFojcfq8j2s0ds/y7nRe6fQe5j/h+gPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDyF3MegXKA8hdzHoFygPIXcx6BcoDzFb7mz/Nu5mf6aO49v5jh3fqoHaKaI3Fmbgx099B+gmeJIdx4Ve7jz2I7cX+Tt7k9gpoJGCrlXPInG7jw2Y0lPy93g/3mHqhNtzV+ypKflbjTRdk+0NX/Jkp6Wu9FE268m2pq/ZElPy91oonKPsaSnd3SPYWDikiU9LXejiTaaFWsxf8mSnpa70URP7x7CwMQlS3pa7kYTrS3jrflLlvT0yd3tzsrST9BE203R1vwlS3pa7kYTbfdEW/OXLOlpuRvk71B1oq35S5b09J7uvHqWcfubwZKe3umbcdjYszR9JoElPS13o4+ysWdp+kwCS3p6t+/9GRvHO1Z3KPUk5F9h43jHDu48CmzsWZo+kyR2n4BFBco9S9NnkvykO4X3Ea2UOyC+D9yooJHmtkLuQ7hRQWMbZEHuQ7hRQWMbZOEg9zeBKsj9KFAFuR8FqiD3o0AVVvfzIffPIPdPcLlcAcv2v1IG1A0HAAAAAElFTkSuQmCC"img>
+	
+	  <input type="text" class="text-input" id="text-input_15" placeholder="Texte 15">
+    </div>	
+  </div>
+
+    <div class="containerCercles_3">
+        <div class="operateurK" id="operateurK"></div>
+		
+		<div class="operateurL" id="operateurL"></div>
+		
+		<div class="operateurM" id="operateurM"></div>
+		
+		<div class="operateurN" id="operateurN"></div>
+		
+		<div class="operateurO" id="operateurO"></div>
+    </div>
+
+	</div>
+	</div>
+
+    <canvas id="canvas" width="1630" height="900"></canvas>
+    <button id="clearAllButton" style="position: fixed; top: 20px; right: 20px; cursor: pointer;">🗑</button><!-- Bouton pour effacer tous les traits -->
+	    <button class="btn btn-primary" style="position: fixed; top: 10px; right: 50px; cursor: pointer;"onclick="exportTextInputsToExcel()">Exporter vers Excel</button><!-- Bouton pour déclencher l'exportation -->
+<script>
+
+document.addEventListener('DOMContentLoaded', function () {
+    
+    const textInputs = document.querySelectorAll('.text-input');// Sélectionnez les éléments de champ de texte
+    const operateurA = document.getElementById('operateurA');
+    const operateurB = document.getElementById('operateurB');
+    const operateurC = document.getElementById('operateurC');
+    const operateurD = document.getElementById('operateurD');
+    const operateurE = document.getElementById('operateurE');
+    const operateurF = document.getElementById('operateurF');
+    const operateurG = document.getElementById('operateurG');
+    const operateurH = document.getElementById('operateurH');
+    const operateurI = document.getElementById('operateurI');
+    const operateurJ = document.getElementById('operateurJ');
+    const operateurK = document.getElementById('operateurK');
+    const operateurL = document.getElementById('operateurL');
+    const operateurM = document.getElementById('operateurM');
+    const operateurN = document.getElementById('operateurN');
+    const operateurO = document.getElementById('operateurO');
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    let isDrawing = false;
+    let lines = [];
+    let buttons = [];
+    let colors = ['green', 'orange', 'red', '#F8F8F8'];
+    let currentColorIndexes = {
+        operateurA: 0,
+        operateurB: 0,
+        operateurC: 0,
+        operateurD: 0,
+        operateurE: 0,
+        operateurF: 0,
+        operateurG: 0,
+        operateurH: 0,
+        operateurI: 0,
+        operateurJ: 0,
+        operateurK: 0,
+        operateurL: 0,
+        operateurM: 0,
+        operateurN: 0,
+        operateurO: 0
+    };
+
+    textInputs.forEach(input => { // Restaurez les données des champs de texte à partir du stockage local
+        const inputId = input.getAttribute('id');
+        const storedValue = localStorage.getItem(inputId);
+        if (storedValue !== null) {
+            input.value = storedValue;
+        }
+    });
+
+    textInputs.forEach(input => {// Enregistrez les données des champs de texte dans le stockage local lors de la modification
+        input.addEventListener('input', function () {
+            const inputId = input.getAttribute('id');
+            localStorage.setItem(inputId, input.value);
+        });
+    });
+	
+    const storedColorIndexes = JSON.parse(localStorage.getItem('circleColorIndexes'));
+    if (storedColorIndexes !== null) {
+        currentColorIndexes = storedColorIndexes;
+        for (const operateur in currentColorIndexes) {
+            document.getElementById(operateur).style.backgroundColor = colors[currentColorIndexes[operateur]];
+        }
+    }
+
+    const storedLines = JSON.parse(localStorage.getItem('storedLines'));
+    if (storedLines !== null) {
+        lines = storedLines;
+        redrawLines();
+    }
+
+    const storedButtons = JSON.parse(localStorage.getItem('storedButtons'));
+    if (storedButtons !== null) {
+        storedButtons.forEach(button => {
+            const eraseButton = document.createElement('button');
+            eraseButton.classList.add('erase-button');
+            eraseButton.textContent = 'X';
+            document.body.appendChild(eraseButton);
+            buttons.push(eraseButton);
+
+            eraseButton.addEventListener('click', function () {
+                const lineIndex = buttons.indexOf(eraseButton);
+                lines.splice(lineIndex, 1);
+                buttons.splice(lineIndex, 1);
+                eraseButton.parentNode.removeChild(eraseButton);
+                redrawLines();
+
+                localStorage.setItem('storedLines', JSON.stringify(lines));
+                localStorage.setItem('storedButtons', JSON.stringify(buttons.map(button => button.outerHTML)));
+            });
+
+            const line = lines[buttons.indexOf(eraseButton)];
+            eraseButton.style.left = (line.start.x + line.end.x) / 2 - eraseButton.offsetWidth / 2 + 266 + 'px';
+            eraseButton.style.top = (line.start.y + line.end.y) / 2 - eraseButton.offsetHeight / 2 + 40 + 'px';
+        });
+    }
+
+    function drawLine(startX, startY, endX, endY, id) {
+        ctx.beginPath();
+        ctx.moveTo(startX, startY);
+        ctx.lineTo(endX, endY);
+        ctx.strokeStyle = 'black';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+        ctx.closePath();
+        ctx.font = '12px Arial';
+        ctx.fillStyle = 'black';
+        ctx.fillText(id, (startX + endX) / 2, (startY + endY) / 2);
+    }
+
+    function onMouseDown(e) {
+        if (e.target === canvas) {
+            isDrawing = true;
+            const rect = canvas.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const line = { start: { x, y }, end: { x, y }, id: lines.length };
+            lines.push(line);
+        }
+    }
+
+    function onMouseMove(e) {
+        if (isDrawing) {
+            const rect = canvas.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const lastIndex = lines.length - 1;
+            lines[lastIndex].end.x = x;
+            lines[lastIndex].end.y = y;
+            redrawLines();
+        }
+    }
+
+    function redrawLines() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        lines.forEach(line => {
+            drawLine(line.start.x, line.start.y, line.end.x, line.end.y, line.id);
+        });
+    }
+
+    canvas.addEventListener('mousedown', onMouseDown);
+    canvas.addEventListener('mousemove', onMouseMove);
+
+    canvas.addEventListener('mouseup', function (e) {
+        if (isDrawing) {
+            const rect = canvas.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const lastIndex = lines.length - 1;
+            lines[lastIndex].end.x = x;
+            lines[lastIndex].end.y = y;
+            if (lines[lastIndex].start.x !== lines[lastIndex].end.x || lines[lastIndex].start.y !== lines[lastIndex].end.y) {
+                addEraseButton(lastIndex);
+            } else {
+                lines.pop();
+            }
+            isDrawing = false;
+
+            localStorage.setItem('storedLines', JSON.stringify(lines));
+            localStorage.setItem('storedButtons', JSON.stringify(buttons.map(button => button.outerHTML)));
+        }
+    });
+
+    function addEraseButton(index) {
+        const eraseButton = document.createElement('button');
+        eraseButton.classList.add('erase-button');
+        eraseButton.textContent = 'X';
+        document.body.appendChild(eraseButton);
+        buttons.push(eraseButton);
+
+        eraseButton.addEventListener('click', function () {
+            const lineIndex = buttons.indexOf(eraseButton);
+            lines.splice(lineIndex, 1);
+            buttons.splice(lineIndex, 1);
+            eraseButton.parentNode.removeChild(eraseButton);
+            redrawLines();
+
+            localStorage.setItem('storedLines', JSON.stringify(lines));
+            localStorage.setItem('storedButtons', JSON.stringify(buttons.map(button => button.outerHTML)));
+        });
+
+        const line = lines[index];
+        eraseButton.style.left = (line.start.x + line.end.x) / 2 - eraseButton.offsetWidth / 2 + 266 + 'px';
+        eraseButton.style.top = (line.start.y + line.end.y) / 2 - eraseButton.offsetHeight / 2 + 40 + 'px';
+    }
+	
+	    // Ajouter l'écouteur de clic pour les opérateurs pour changer leur couleur
+    document.querySelectorAll('.operateurA, .operateurB, .operateurC, .operateurD, .operateurE, .operateurF, .operateurG, .operateurH, .operateurI, .operateurJ, .operateurK, .operateurL, .operateurM, .operateurN, .operateurO').forEach(operateur => {
+        operateur.addEventListener('click', function () {
+            const operateurId = operateur.getAttribute('id');
+            currentColorIndexes[operateurId] = (currentColorIndexes[operateurId] + 1) % colors.length;
+            operateur.style.backgroundColor = colors[currentColorIndexes[operateurId]];
+            localStorage.setItem('circleColorIndexes', JSON.stringify(currentColorIndexes));
+        });
+    });
+
+
+
+
+
+
+
+
+
+
+
+	    function getTextInputsData() {// Fonction pour récupérer les valeurs des champs de texte
+        const textData = {};
+        textInputs.forEach(input => {
+            const inputId = input.getAttribute('id');
+            const storedValue = localStorage.getItem(inputId);
+            if (storedValue !== null) {
+                textData[inputId] = storedValue;
+            }
+        });
+        return textData;
+    }
+    window.getTextInputsData = getTextInputsData;// Attachez la fonction au global window object
+
+		function getCircleColorIndexes() {// Fonction pour récupérer les couleurs des cercles
+		const storedColorIndexes = JSON.parse(localStorage.getItem('circleColorIndexes'));
+		if (storedColorIndexes !== null) {
+        const colorData = {};
+        for (const operateur in storedColorIndexes) {
+            colorData[operateur] = colors[storedColorIndexes[operateur]];
+        }
+        return colorData;//console.log("Color Data in getCircleColorIndexes:", colorData)
+		}
+		return {};//console.log("No stored color indexes found.")
+	}
+	window.getCircleColorIndexes = getCircleColorIndexes; // Attachez la fonction au global window object
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- function afficherCouleurs() {// Afficher les couleurs récupérées dans la console -->
+    <!-- const colorData = getCircleColorIndexes(); -->
+    <!-- for (const operateur in colorData) { -->
+        <!-- console.log(`Couleur de ${operateur}: ${colorData[operateur]}`); -->
+    <!-- } -->
+<!-- } -->
+<!-- afficherCouleurs();// Appel de la fonction pour afficher les couleurs récupérées -->
+
+<!-- const colorData = getCircleColorIndexes(); -->
+<!-- console.log("Color Data:", colorData);			 -->
+
+<!-- function exportTextInputsToTextFile() { -->
+    <!-- let textFileContent = 'ID,Texte,Couleur\n'; // En-tête -->
+
+    <!-- // Récupérer les données des champs de texte et des couleurs -->
+    <!-- const textData = getTextInputsData(); -->
+    <!-- const colorData = getCircleColorIndexes(); -->
+
+    <!-- // Ajouter les données des champs de texte et des couleurs au contenu du fichier texte -->
+    <!-- for (const id in textData) { -->
+        <!-- const color = colorData[id] || ''; // Obtenez la couleur correspondante ou une chaîne vide si elle n'est pas définie -->
+        <!-- textFileContent += `${id},${textData[id]},${color}\n`; -->
+    <!-- } -->
+
+    <!-- // Créer un blob et le sauvegarder comme fichier texte -->
+    <!-- const blob = new Blob([textFileContent], { type: 'text/plain' }); -->
+    <!-- saveAs(blob, 'export.txt'); -->
+<!-- } -->
+
+<!-- // Attachez la fonction au global window object -->
+<!-- window.exportTextInputsToTextFile = exportTextInputsToTextFile; -->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	function getColorHex(color) {// Fonction pour convertir le nom de la couleur en code hexadécimal
+		const colorMap = {
+        'green': '00FF00',
+        'orange': 'FFA500',
+        'red': 'FF0000',
+        '#F8F8F8': 'F8F8F8',
+        'No Color Found': 'FFFFFF'
+    };
+		const hexColor = colorMap[color] || 'FFFFFF';
+		console.log(`Color: ${color}, Hex: ${hexColor}`);
+		return hexColor;
+	}	
+
+function exportTextInputsToExcel() {
+    const workbook = new ExcelJS.Workbook();
+    const worksheet = workbook.addWorksheet('Feuille 1');
+
+    worksheet.addRow(['ID', 'Texte', 'Couleur']);// Header
+
+    const textData = getTextInputsData();// Récupérer les données des champs de texte et des couleurs
+    const colorData = getCircleColorIndexes();
+
+    const idMapping = {// Correspondance explicite entre les identifiants des champs de texte et des cercles de couleur
+        'text-input_1': 'operateurA',
+        'text-input_2': 'operateurB',
+        'text-input_3': 'operateurC',
+        'text-input_4': 'operateurD',
+        'text-input_5': 'operateurE',
+        'text-input_6': 'operateurF',
+        'text-input_7': 'operateurG',
+        'text-input_8': 'operateurH',
+        'text-input_9': 'operateurI',
+        'text-input_10': 'operateurJ',		
+        'text-input_11': 'operateurK',
+        'text-input_12': 'operateurL',
+        'text-input_13': 'operateurM',
+        'text-input_14': 'operateurN',
+        'text-input_15': 'operateurO',
+    };
+    for (const id in textData) {
+        if (textData.hasOwnProperty(id)) {
+            const operateurId = idMapping[id];
+            const color = colorData[operateurId] || 'No Color Found';
+            worksheet.addRow([id, textData[id], color]);
+        } else {
+            console.log(`ID not found in textData: ${id}`);
+        }
+    }
+
+    worksheet.eachRow({ includeEmpty: false }, function (row, rowNumber) {// Appliquer les styles de couleur aux cellules
+        if (rowNumber > 1) {
+            const colorName = row.getCell(3).value; // La troisième colonne contient les couleurs
+            const colorHex = getColorHex(colorName); // Convertir le nom de la couleur en code hexadécimal
+            row.getCell(3).fill = {
+                type: 'pattern',
+                pattern: 'solid',
+                fgColor: { argb: colorHex }
+            };
+        }
+    });
+
+    workbook.xlsx.writeBuffer().then(function (buffer) {// Enregistrement du fichier
+        saveAs(new Blob([buffer], { type: 'application/octet-stream' }), 'export.xlsx');
+    });
+}
+window.exportTextInputsToExcel = exportTextInputsToExcel;// Attachez la fonction au global window object
+
+    function clearAllLines() {
+        lines = [];
+        buttons.forEach(button => button.parentNode.removeChild(button));
+        buttons = [];
+        redrawLines();
+
+        localStorage.removeItem('storedLines');
+        localStorage.removeItem('storedButtons');
+    }
+
+    const clearAllButton = document.getElementById('clearAllButton');
+    clearAllButton.addEventListener('click', clearAllLines);
+
+});
+</script>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/Sidebar-Menu.js"></script>
+
+</body>
+
+</html>

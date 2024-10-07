@@ -1,0 +1,2947 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Progression</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/Projects-Clean.css">
+    <link rel="stylesheet" href="assets/css/Sidebar-Menu-1.css">
+    <link rel="stylesheet" href="assets/css/Sidebar-Menu.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+<script>	
+</script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+<body style="background-color: #F8F8F8";>
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+          <li class="sidebar-brand"> <a href="index.html">ACCUEIL</a></li>
+		  <li><a>&nbsp;</a></li>
+          <li><a href="S.html">Sécurité</a></li>
+		  <li><a href="E.html">Environnement</a></li>
+          <li><a href="Q.html">Qualité</a></li>
+          <li><a href="M.html">Maintenance</a></li>
+          <li><a href="C.html">Coût</a></li>
+          <li><a href="D.html">Délai</a></li>
+          <li><a href="P.html">Personnel</a></li>
+		  <li><a>&nbsp;</a></li>
+		  <li><a>&nbsp;</a></li>
+		  <li><a>&nbsp;</a></li>
+		  <li><a href="CAL.html">Calendrier</a></li>
+		  <li><a>&nbsp;</a></li>
+		  <li><a>&nbsp;</a></li>
+		  <li><a>&nbsp;</a></li>
+		   <li><a>&nbsp;</a></li>
+		    <li><a>&nbsp;</a></li>
+		  <li><a href="APROPOS.html" target="popup" onclick="window.open('','popup','width=770,height=900,left=600,top=100,resizable=no,scrollbars=no,toolbar=no,menubar=no,location=no,status=no')">A propos</a></li>
+          </li>
+            </ul>
+        </div>
+		
+		
+		
+        <div class="page-content-wrapper">
+            <div class="container-fluid border-dark"><a class="btn btn-link" role="button" id="menu-toggle" href="#menu-toggle"><i class="fa fa-bars"></i></a>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container_1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 200px;
+        }
+		
+        .container_2,
+        .container_3,
+        .container_4,
+        .container_5,
+        .container_6,
+        .container_7,		
+        .container_8,
+        .container_9,
+        .container_10 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 60px;
+        }		
+
+        .input-container_1 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+			margin-top: 0px; /* Ajoute un espace de 20px au-dessus de container_1 / haut de page */
+        }
+
+        .input-container_2,
+        .input-container_3,
+        .input-container_4,
+        .input-container_5,
+        .input-container_6,
+        .input-container_7,
+        .input-container_8,
+        .input-container_9,
+        .input-container_10 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        #inputValue_1,
+		#inputValue_2,
+		#inputValue_3,
+		#inputValue_4,
+		#inputValue_5,
+		#inputValue_6,
+		#inputValue_7,
+		#inputValue_8,
+		#inputValue_9,
+		#inputValue_10 {
+            padding: 10px;
+            margin-right: 10px;
+            width: 50px;
+            font-size: 14px;
+			text-align: center;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            margin-right: 10px;
+            width: 200px;
+            height: 44px;
+            font-size: 14px;
+			text-align: center;
+        }
+
+        input[type="date"],
+        input[type="time"] {
+            padding: 10px;
+            margin-right: 10px;
+            width: 120px;
+            font-size: 14px;
+        }
+		
+		#inputRess_1,
+		#inputRess_2,
+		#inputRess_3,
+		#inputRess_4,
+		#inputRess_5,
+		#inputRess_6,
+		#inputRess_7,
+		#inputRess_8,
+		#inputRess_9,
+		#inputRess_10 {/* Styles spécifiques pour l'élément avec l'ID inputRess */
+		font-size: 26px;
+		color: blue;
+		}
+
+        .bargraph-container {
+            position: relative;
+            width: 1000px;
+            margin-bottom: 20px;
+        }
+
+        .bargraph {
+            width: 100%;
+            height: 30px;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+
+        .bar {
+            background-color: #9143cc;/* #007bff */
+            height: 100%;
+			box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ajout de l'ombre portée */
+        }
+
+    .quantite-markers_1,
+    .quantite-markers_2,
+    .quantite-markers_3,
+    .quantite-markers_4,
+    .quantite-markers_5,
+    .quantite-markers_6,
+    .quantite-markers_7,
+    .quantite-markers_8,
+    .quantite-markers_9,
+    .quantite-markers_10 {
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+
+
+
+
+	.quantite-marker_1,
+	.quantite-marker_2,
+	.quantite-marker_3,
+	.quantite-marker_4,
+	.quantite-marker_5,
+	.quantite-marker_6,
+	.quantite-marker_7,
+	.quantite-marker_8,
+	.quantite-marker_9,
+	.quantite-marker_10 {
+		position: absolute;
+		width: 1px;
+		height: 10px;
+		background-color: #ccc;
+		top: -15px;
+	}
+
+    .quantite-label_1,
+    .quantite-label_2,
+    .quantite-label_3,
+    .quantite-label_4,
+    .quantite-label_5,
+    .quantite-label_6,
+    .quantite-label_7,
+    .quantite-label_8,
+    .quantite-label_9,
+    .quantite-label_10 {
+            position: absolute;
+            bottom: -20px;
+            transform: translateX(-50%);
+        }
+
+        .buttons-container {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 36px;
+			box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ajout de l'ombre portée */
+        }
+
+        #updateButton_1,
+		#updateButton_2,
+        #updateButton_3,
+        #updateButton_4,
+        #updateButton_5,
+        #updateButton_6,
+		#updateButton_7,
+        #updateButton_8,
+        #updateButton_9,
+        #updateButton_10 {
+            margin-right: 15px;
+            font-size: 16px;
+			box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ajout de l'ombre portée */
+        }
+
+        .indicator {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-left: 10px;
+			border:1px solid #555555;/* contour cercle */
+			box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ajout de l'ombre portée */
+        }
+		
+        .indicatorR {/* Ajout de l'indicateur en doublon début de page */
+            width: 40px;/* Définir la largeur souhaitée pour les indicateurs */
+            height: 40px;/* Définir la hauteur souhaitée pour les indicateurs */
+            border-radius: 50%;/* Rendre les indicateurs ronds */
+            margin-left: auto;
+			margin-right: auto; /* Ajoute une marge entre l'indicateur et le texte si nécessaire */
+			border:1px solid #555555;/* contour cercle */
+			box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ajout de l'ombre portée */
+
+        }
+
+	.containerfixe {
+    z-index: 999;
+    position: fixed;
+    top: 30px;
+    left: 260px; /* Décalage de 250px + 10px de padding */
+    width: calc(100% - 510px); /* Définir la largeur moins le décalage */
+	}
+	.indicatorsR-row {
+   /* position: fixed;  Fixe l'élément par rapport à la fenêtre du navigateur */
+    top: 30px; /* Définit la distance entre le haut de l'élément et le haut de la fenêtre */
+    left: 10px; /* Définit la distance entre la gauche de l'élément et la gauche de la fenêtre */
+    width: 99%; /* Définit la largeur de l'élément à 100% de la largeur de la fenêtre */
+    display: flex; /* Conteneur flexbox pour placer les éléments sur la même ligne */
+    background-color: #ebebeb; /* Fond */	
+    border: 1px solid #ccc; /* Couleur et épaisseur de la bordure */
+    padding: 10px; /* Espace intérieur du cadre */
+	}
+
+	.indicatorR-container {
+            margin-left: auto;
+			margin-right: auto;
+	/* margin-right: 20px;  Ajouter une marge entre les conteneurs si nécessaire */
+	align-items: center; /* Centrage vertical des éléments */
+	}
+	
+	.indicatorR-container span {/* Styles pour le texte du bargraph */
+    font-size: 14px; /* Taille de police */
+	}
+
+        .green {
+            background-color: #36d73e;
+        }
+
+        .red {
+            background-color: red;
+        }
+		
+        .orange {
+            background-color: orange;
+        }
+		
+
+        .color-zone {
+            position: absolute;
+            height: 100%;
+            width: 2px;
+            background-color: green;
+            right: 0;
+            top: 0px;
+        }
+
+        .separator { /* Classe pour la ligne de séparation */
+            width: 75%;
+            height: 4px; /* Hauteur de la ligne */
+            background-color: #ccc; /* Couleur de la ligne */
+            margin: 60px; /* Marge supérieure et inférieure */
+        }
+
+    </style>
+
+<div class="containerfixe">
+<div class="indicatorsR-row">
+    <div class="indicatorR-container">
+        <div id="indicatorR_1" class="indicatorR"></div>
+        <span id="labelRess_1"></span>
+    </div>
+
+    <div class="indicatorR-container">
+        <div id="indicatorR_2" class="indicatorR"></div>
+        <span id="labelRess_2"></span>
+    </div>
+
+    <div class="indicatorR-container">
+        <div id="indicatorR_3" class="indicatorR"></div>
+        <span id="labelRess_3"></span>
+    </div>
+
+    <div class="indicatorR-container">
+        <div id="indicatorR_4" class="indicatorR"></div>
+        <span id="labelRess_4"></span>
+    </div>	
+
+    <div class="indicatorR-container">
+        <div id="indicatorR_5" class="indicatorR"></div>
+        <span id="labelRess_5"></span>
+    </div>	
+
+    <div class="indicatorR-container">
+        <div id="indicatorR_6" class="indicatorR"></div>
+        <span id="labelRess_6"></span>
+    </div>	
+
+    <div class="indicatorR-container">
+        <div id="indicatorR_7" class="indicatorR"></div>
+        <span id="labelRess_7"></span>
+    </div>	
+
+    <div class="indicatorR-container">
+        <div id="indicatorR_8" class="indicatorR"></div>
+        <span id="labelRess_8"></span>
+    </div>	
+
+    <div class="indicatorR-container">
+        <div id="indicatorR_9" class="indicatorR"></div>
+        <span id="labelRess_9"></span>
+    </div>	
+
+    <div class="indicatorR-container">
+        <div id="indicatorR_10" class="indicatorR"></div>
+        <span id="labelRess_10"></span>
+    </div>	
+
+</div>
+
+    </div>
+
+    <div class="container_1">
+        <div class="input-container_1">
+		<input type="text" id="inputRess_1" title="Ressource" placeholder="Ressource">
+            <input type="text" id="inputValue_1" title="Qantité" placeholder="Qté">
+            <button id="updateButton_1" onclick="updateBar_1()">Mettre à jour</button>
+            <input type="text" id="designationValue_1" title="Désignation produit" placeholder="Désignation produit">
+            <label for="date_1">Date fin :&nbsp;</label>
+            <input type="date" title="Date de fin Prod." id="date_1" name="date_1">
+            <label for="heure_1">Heure fin :&nbsp;</label>
+            <input type="time" title="Heure de fin Prod." id="heure_1" name="heure_1">
+            <div id="indicator_1" class="indicator"></div>
+        </div>
+        <div class="bargraph-container">
+            <div class="bargraph">
+                <div class="bar" id="bar_1" style="width: 0;">
+                    <span id="percentage_1">0%</span>
+                    <div class="color-zone"></div>
+                </div>
+                <div class="quantite-markers_1"></div>
+            </div>
+        </div>
+        <div class="buttons-container">
+            <button id="monBouton_1" onclick="decreaseBar_1()">&nbsp;-&nbsp;</button>
+            <button onclick="increaseBar_1()">&thinsp;+&thinsp;</button>
+        </div>
+
+    <div class="separator"></div><!-- Ligne de séparation -->
+
+		<div class="container_2">
+        <div class="input-container_2">
+		<input type="text" id="inputRess_2" title="Ressource" placeholder="Ressource">
+            <input type="text" id="inputValue_2" title="Qantité" placeholder="Qté">
+            <button id="updateButton_2" onclick="updateBar_2()">Mettre à jour</button>
+            <input type="text" id="designationValue_2" title="Désignation produit" placeholder="Désignation produit">
+            <label for="date_2">Date fin :&nbsp;</label>
+            <input type="date" title="Date de fin Prod." id="date_2" name="date_2">
+            <label for="heure_2">Heure fin :&nbsp;</label>
+            <input type="time" title="Heure de fin Prod." id="heure_2" name="heure_2">
+            <div id="indicator_2" class="indicator"></div>
+        </div>
+        <div class="bargraph-container">
+            <div class="bargraph">
+                <div class="bar" id="bar_2" style="width: 0;">
+                    <span id="percentage_2">0%</span>
+                    <div class="color-zone"></div>
+                </div>
+                <div class="quantite-markers_2"></div>
+            </div>
+        </div>
+        <div class="buttons-container">
+            <button id="monBouton_2" onclick="decreaseBar_2()">&nbsp;-&nbsp;</button>
+            <button onclick="increaseBar_2()">&thinsp;+&thinsp;</button>
+        </div>
+    </div>
+
+    <div class="separator"></div><!-- Ligne de séparation -->
+
+		<div class="container_3">
+        <div class="input-container_3">
+		<input type="text" id="inputRess_3" title="Ressource" placeholder="Ressource">		
+            <input type="text" id="inputValue_3" title="Qantité" placeholder="Qté">
+            <button id="updateButton_3" onclick="updateBar_3()">Mettre à jour</button>
+            <input type="text" id="designationValue_3" title="Désignation produit" placeholder="Désignation produit">
+            <label for="date_3">Date fin :&nbsp;</label>
+            <input type="date" title="Date de fin Prod." id="date_3" name="date_3">
+            <label for="heure_3">Heure fin :&nbsp;</label>
+            <input type="time" title="Heure de fin Prod." id="heure_3" name="heure_3">
+            <div id="indicator_3" class="indicator"></div>
+        </div>
+        <div class="bargraph-container">
+            <div class="bargraph">
+                <div class="bar" id="bar_3" style="width: 0;">
+                    <span id="percentage_3">0%</span>
+                    <div class="color-zone"></div>
+                </div>
+                <div class="quantite-markers_3"></div>
+            </div>
+        </div>
+        <div class="buttons-container">
+            <button id="monBouton_3" onclick="decreaseBar_3()">&nbsp;-&nbsp;</button>
+            <button onclick="increaseBar_3()">&thinsp;+&thinsp;</button>
+        </div>
+    </div>
+
+    <div class="separator"></div><!-- Ligne de séparation -->
+
+		<div class="container_4">
+        <div class="input-container_4">
+		<input type="text" id="inputRess_4" title="Ressource" placeholder="Ressource">
+            <input type="text" id="inputValue_4" title="Qantité" placeholder="Qté">
+            <button id="updateButton_4" onclick="updateBar_4()">Mettre à jour</button>
+            <input type="text" id="designationValue_4" title="Désignation produit" placeholder="Désignation produit">
+            <label for="date_4">Date fin :&nbsp;</label>
+            <input type="date" title="Date de fin Prod." id="date_4" name="date_4">
+            <label for="heure_4">Heure fin :&nbsp;</label>
+            <input type="time" title="Heure de fin Prod." id="heure_4" name="heure_4">
+            <div id="indicator_4" class="indicator"></div>
+        </div>
+        <div class="bargraph-container">
+            <div class="bargraph">
+                <div class="bar" id="bar_4" style="width: 0;">
+                    <span id="percentage_4">0%</span>
+                    <div class="color-zone"></div>
+                </div>
+                <div class="quantite-markers_4"></div>
+            </div>
+        </div>
+        <div class="buttons-container">
+            <button id="monBouton_4" onclick="decreaseBar_4()">&nbsp;-&nbsp;</button>
+            <button onclick="increaseBar_4()">&thinsp;+&thinsp;</button>
+        </div>
+    </div>
+
+    <div class="separator"></div><!-- Ligne de séparation -->
+
+		<div class="container_5">
+        <div class="input-container_5">
+		<input type="text" id="inputRess_5" title="Ressource" placeholder="Ressource">
+            <input type="text" id="inputValue_5" title="Qantité" placeholder="Qté">
+            <button id="updateButton_5" onclick="updateBar_5()">Mettre à jour</button>
+            <input type="text" id="designationValue_5" title="Désignation produit" placeholder="Désignation produit">
+            <label for="date_5">Date fin :&nbsp;</label>
+            <input type="date" title="Date de fin Prod." id="date_5" name="date_5">
+            <label for="heure_5">Heure fin :&nbsp;</label>
+            <input type="time" title="Heure de fin Prod." id="heure_5" name="heure_5">
+            <div id="indicator_5" class="indicator"></div>
+        </div>
+        <div class="bargraph-container">
+            <div class="bargraph">
+                <div class="bar" id="bar_5" style="width: 0;">
+                    <span id="percentage_5">0%</span>
+                    <div class="color-zone"></div>
+                </div>
+                <div class="quantite-markers_5"></div>
+            </div>
+        </div>
+        <div class="buttons-container">
+            <button id="monBouton_5" onclick="decreaseBar_5()">&nbsp;-&nbsp;</button>
+            <button onclick="increaseBar_5()">&thinsp;+&thinsp;</button>
+        </div>
+    </div>
+
+    <div class="separator"></div><!-- Ligne de séparation -->
+
+		<div class="container_6">
+        <div class="input-container_6">
+		<input type="text" id="inputRess_6" title="Ressource" placeholder="Ressource">
+            <input type="text" id="inputValue_6" title="Qantité" placeholder="Qté">
+            <button id="updateButton_6" onclick="updateBar_6()">Mettre à jour</button>
+            <input type="text" id="designationValue_6" title="Désignation produit" placeholder="Désignation produit">
+            <label for="date_6">Date fin :&nbsp;</label>
+            <input type="date" title="Date de fin Prod." id="date_6" name="date_6">
+            <label for="heure_6">Heure fin :&nbsp;</label>
+            <input type="time" title="Heure de fin Prod." id="heure_6" name="heure_6">
+            <div id="indicator_6" class="indicator"></div>
+        </div>
+        <div class="bargraph-container">
+            <div class="bargraph">
+                <div class="bar" id="bar_6" style="width: 0;">
+                    <span id="percentage_6">0%</span>
+                    <div class="color-zone"></div>
+                </div>
+                <div class="quantite-markers_6"></div>
+            </div>
+        </div>
+        <div class="buttons-container">
+            <button id="monBouton_6" onclick="decreaseBar_6()">&nbsp;-&nbsp;</button>
+            <button onclick="increaseBar_6()">&thinsp;+&thinsp;</button>
+        </div>
+    </div>
+
+    <div class="separator"></div><!-- Ligne de séparation -->	
+
+		<div class="container_7">
+        <div class="input-container_7">
+		<input type="text" id="inputRess_7" title="Ressource" placeholder="Ressource">
+            <input type="text" id="inputValue_7" title="Qantité" placeholder="Qté">
+            <button id="updateButton_7" onclick="updateBar_7()">Mettre à jour</button>
+            <input type="text" id="designationValue_7" title="Désignation produit" placeholder="Désignation produit">
+            <label for="date_7">Date fin :&nbsp;</label>
+            <input type="date" title="Date de fin Prod." id="date_7" name="date_7">
+            <label for="heure_7">Heure fin :&nbsp;</label>
+            <input type="time" title="Heure de fin Prod." id="heure_7" name="heure_7">
+            <div id="indicator_7" class="indicator"></div>
+        </div>
+        <div class="bargraph-container">
+            <div class="bargraph">
+                <div class="bar" id="bar_7" style="width: 0;">
+                    <span id="percentage_7">0%</span>
+                    <div class="color-zone"></div>
+                </div>
+                <div class="quantite-markers_7"></div>
+            </div>
+        </div>
+        <div class="buttons-container">
+            <button id="monBouton_7" onclick="decreaseBar_7()">&nbsp;-&nbsp;</button>
+            <button onclick="increaseBar_7()">&thinsp;+&thinsp;</button>
+        </div>
+    </div>
+
+    <div class="separator"></div><!-- Ligne de séparation -->	
+
+		<div class="container_8">
+        <div class="input-container_8">
+		<input type="text" id="inputRess_8" title="Ressource" placeholder="Ressource">
+            <input type="text" id="inputValue_8" title="Qantité" placeholder="Qté">
+            <button id="updateButton_8" onclick="updateBar_8()">Mettre à jour</button>
+            <input type="text" id="designationValue_8" title="Désignation produit" placeholder="Désignation produit">
+            <label for="date_8">Date fin :&nbsp;</label>
+            <input type="date" title="Date de fin Prod." id="date_8" name="date_8">
+            <label for="heure_8">Heure fin :&nbsp;</label>
+            <input type="time" title="Heure de fin Prod." id="heure_8" name="heure_8">
+            <div id="indicator_8" class="indicator"></div>
+        </div>
+        <div class="bargraph-container">
+            <div class="bargraph">
+                <div class="bar" id="bar_8" style="width: 0;">
+                    <span id="percentage_8">0%</span>
+                    <div class="color-zone"></div>
+                </div>
+                <div class="quantite-markers_8"></div>
+            </div>
+        </div>
+        <div class="buttons-container">
+            <button id="monBouton_8" onclick="decreaseBar_8()">&nbsp;-&nbsp;</button>
+            <button onclick="increaseBar_8()">&thinsp;+&thinsp;</button>
+        </div>
+    </div>
+
+    <div class="separator"></div><!-- Ligne de séparation -->	
+	
+		<div class="container_9">
+        <div class="input-container_9">
+		<input type="text" id="inputRess_9" title="Ressource" placeholder="Ressource">
+            <input type="text" id="inputValue_9" title="Qantité" placeholder="Qté">
+            <button id="updateButton_9" onclick="updateBar_9()">Mettre à jour</button>
+            <input type="text" id="designationValue_9" title="Désignation produit" placeholder="Désignation produit">
+            <label for="date_9">Date fin :&nbsp;</label>
+            <input type="date" title="Date de fin Prod." id="date_9" name="date_9">
+            <label for="heure_9">Heure fin :&nbsp;</label>
+            <input type="time" title="Heure de fin Prod." id="heure_9" name="heure_9">
+            <div id="indicator_9" class="indicator"></div>
+        </div>
+        <div class="bargraph-container">
+            <div class="bargraph">
+                <div class="bar" id="bar_9" style="width: 0;">
+                    <span id="percentage_9">0%</span>
+                    <div class="color-zone"></div>
+                </div>
+                <div class="quantite-markers_9"></div>
+            </div>
+        </div>
+        <div class="buttons-container">
+            <button id="monBouton_9" onclick="decreaseBar_9()">&nbsp;-&nbsp;</button>
+            <button onclick="increaseBar_9()">&thinsp;+&thinsp;</button>
+        </div>
+    </div>
+
+    <div class="separator"></div><!-- Ligne de séparation -->	
+
+		<div class="container_10">
+        <div class="input-container_10">
+		<input type="text" id="inputRess_10" title="Ressource" placeholder="Ressource">
+            <input type="text" id="inputValue_10" title="Qantité" placeholder="Qté">
+            <button id="updateButton_10" onclick="updateBar_10()">Mettre à jour</button>
+            <input type="text" id="designationValue_10" title="Désignation produit" placeholder="Désignation produit">
+            <label for="date_10">Date fin :&nbsp;</label>
+            <input type="date" title="Date de fin Prod." id="date_10" name="date_10">
+            <label for="heure_10">Heure fin :&nbsp;</label>
+            <input type="time" title="Heure de fin Prod." id="heure_10" name="heure_10">
+            <div id="indicator_10" class="indicator"></div>
+        </div>
+        <div class="bargraph-container">
+            <div class="bargraph">
+                <div class="bar" id="bar_10" style="width: 0;">
+                    <span id="percentage_10">0%</span>
+                    <div class="color-zone"></div>
+                </div>
+                <div class="quantite-markers_10"></div>
+            </div>
+        </div>
+        <div class="buttons-container">
+            <button id="monBouton_10" onclick="decreaseBar_10()">&nbsp;-&nbsp;</button>
+            <button onclick="increaseBar_10()">&thinsp;+&thinsp;</button>
+        </div>
+    </div>
+
+    <div class="separator"></div><!-- Ligne de séparation -->
+
+    </div>
+
+    <script>
+function verifierHeure_1() {
+            var heureSelectionnee_1 = document.getElementById("heure_1").value;
+            var heureActuelle_1 = new Date().toLocaleTimeString([], {
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+
+            if (heureSelectionnee_1 === heureActuelle_1) {
+                updateIndicator_1();
+                //alert("L'heure sélectionnée est atteinte !");
+                monBouton_1.disabled = true;
+				localStorage.setItem('buttonState_1', 'disabled');// Sauvegarde l'état de monBouton_1
+			   //clearInterval(interval_1); // Arrêter la vérification
+            }
+        }
+        //var interval_1 = setInterval(verifierHeure_1, 60000); // Vérification chaque minute
+		setInterval(verifierHeure_1, 60000); // Vérification chaque minute
+		
+        var originalValue_1;
+		var inputRess_1;
+        var designationValue_1;
+
+        document.addEventListener('DOMContentLoaded', function () {//Ouverture
+            originalValue_1 = parseFloat(localStorage.getItem('inputValue_1')) || 0;
+            inputRess_1 = localStorage.getItem('inputRess_1') || '';
+            designationValue_1 = localStorage.getItem('designationValue_1') || '';
+            var barWidth_1 = parseFloat(localStorage.getItem('barWidth_1')) || 0;
+            var savedDate_1 = localStorage.getItem('savedDate_1') || '';
+            var savedTime_1 = localStorage.getItem('savedTime_1') || '';
+            var indicatorState_1 = localStorage.getItem('indicatorState_1') || '';
+			
+			var savedPercentage_1 = localStorage.getItem('percentage_1');
+			
+            document.getElementById('inputValue_1').value = originalValue_1;
+            document.getElementById('inputRess_1').value = inputRess_1;			
+            document.getElementById('designationValue_1').value = designationValue_1;
+            document.getElementById('date_1').value = savedDate_1;
+            document.getElementById('heure_1').value = savedTime_1;
+
+			createMarkers_1(originalValue_1);
+			//updateBar_1(barWidth_1);
+			if (savedPercentage_1) {// Mettre à jour la barre de progression avec le pourcentage 
+			var percentageElement_1 = document.getElementById('percentage_1');
+			percentageElement_1.textContent = savedPercentage_1;
+			var width = parseInt(savedPercentage_1) || 0;// Mettre à jour barre de progression
+			var bar_1 = document.getElementById('bar_1');
+			bar_1.style.width = width + '%';
+			}
+            if (indicatorState_1 === 'red') {
+                document.getElementById('indicator_1').className = 'indicator red';
+            } else {
+                document.getElementById('indicator_1').className = 'indicator green';
+            }
+
+			var savedIndicator_1 = localStorage.getItem('indicatorState_1');// Lire la sauvegarde de indicator_1 depuis le localStorage
+			document.getElementById('indicatorR_1').className = savedIndicator_1;// Appliquer la classe sauvegardée à l'élément indicatorR_1
+			//if (!savedIndicator_1) {// Si aucune sauvegarde n'est trouvée, définissez la classe de indicator_1 par défaut
+				//savedIndicator_1 = 'indicator green'; // Valeur par défaut
+			//}
+			var indicator_1 = document.getElementById('indicator_1');// Mettre à jour indicatorR_1 en fonction de la classe de indicator_1
+			if (indicator_1.className === 'indicator green') {
+				document.getElementById('indicatorR_1').className = 'indicator green';
+			} else if (indicator_1.className === 'indicator red') {
+				document.getElementById('indicatorR_1').className = 'indicator red';
+			}
+			var buttonState_1 = localStorage.getItem('buttonState_1');// Charger l'état du bouton depuis le localStorage
+			if (buttonState_1 === 'disabled') {// Vérifier si un état a été sauvegardé
+			monBouton_1.disabled = true;// Désactiver le bouton
+			}
+			document.getElementById('labelRess_1').textContent = document.getElementById('inputRess_1').value;
+			updateIndicator_1();
+        });
+
+        function updateBar_1(savedBarWidth_1) {
+            var inputValue_1 = document.getElementById('inputValue_1').value;
+            originalValue_1 = parseFloat(inputValue_1);
+            var bar_1 = document.getElementById('bar_1');
+            bar_1.style.width = savedBarWidth_1 + '%';
+            if (!isNaN(originalValue_1) && originalValue_1 > 0) {
+                createMarkers_1(originalValue_1);
+                localStorage.setItem('inputValue_1', originalValue_1);
+            }
+			document.getElementById('percentage_1').innerText = '0%'; // Mettre à jour ID 'percentage_1' pour afficher 0%
+            var percentage_1 = '0%'; // Initialiser la variable percentage_1 à '0%'
+			localStorage.setItem('percentage_1', percentage_1); // Sauvegarde localStorage
+            updateIndicator_1();
+			
+			monBouton_1.disabled = false;
+			localStorage.setItem('buttonState_1', 'visible');// Sauvegarde l'état de monBouton_1
+        }
+        document.getElementById('updateButton_1').addEventListener('click', function () {
+            updateBar_1(0);
+        });
+
+        function createMarkers_1(count_1) {
+            var markers_1 = document.querySelector('.quantite-markers_1');
+            markers_1.innerHTML = '';
+            for (var i_1 = 0; i_1 <= count_1; i_1++) {
+                var quantiteMarkerPosition_1 = (i_1 / count_1) * 100;
+                var marker_1 = document.createElement('div');
+                marker_1.className = 'quantite-marker_1';
+                marker_1.style.left = quantiteMarkerPosition_1 + '%';
+                markers_1.appendChild(marker_1);
+                var label_1 = document.createElement('div');
+                label_1.className = 'quantite-label_1';
+                label_1.textContent = i_1;
+                label_1.style.left = quantiteMarkerPosition_1 + '%';
+                markers_1.appendChild(label_1);
+                monBouton_1.disabled = false;
+            }
+        }
+
+        function increaseBar_1() {
+            if (originalValue_1 > 0) {
+                var bar_1 = document.getElementById('bar_1');
+                var currentWidth_1 = parseFloat(bar_1.style.width) || 0;
+                if (currentWidth_1 < 100) {
+                    var increaseAmount_1 = 100 / originalValue_1;
+                    var newWidth_1 = currentWidth_1 + increaseAmount_1;
+                    if (newWidth_1 > 100) {
+                        newWidth_1 = 100;
+                    }
+                    bar_1.style.width = newWidth_1 + '%';
+                    updatePercentage_1(newWidth_1);
+                    localStorage.setItem('barWidth_1', newWidth_1);
+                }
+            }
+            updateIndicator_1();
+        }
+
+        function decreaseBar_1() {
+            if (originalValue_1 > 0) {
+                var bar_1 = document.getElementById('bar_1');
+                var currentWidth_1 = parseFloat(bar_1.style.width) || 0;
+                if (currentWidth_1 > 0) {
+                    var decreaseAmount_1 = 100 / originalValue_1;
+                    var newWidth_1 = currentWidth_1 - decreaseAmount_1;
+                    if (newWidth_1 < 0) {
+                        newWidth_1 = 0;
+                    }
+                    bar_1.style.width = newWidth_1 + '%';
+                    updatePercentage_1(newWidth_1);
+                    localStorage.setItem('barWidth_1', newWidth_1);
+                }
+            }
+            updateIndicator_1();
+        }
+
+        document.getElementById('inputRess_1').addEventListener('input', function () {
+            inputRess_1 = this.value;
+            localStorage.setItem('inputRess_1', inputRess_1);
+			document.getElementById('labelRess_1').textContent = document.getElementById('inputRess_1').value;
+        });
+		
+        document.getElementById('designationValue_1').addEventListener('input', function () {
+            designationValue_1 = this.value;
+            localStorage.setItem('designationValue_1', designationValue_1);
+        });
+
+        document.getElementById('date_1').addEventListener('change', function () {
+            var savedDate_1 = this.value;
+            localStorage.setItem('savedDate_1', savedDate_1);
+            updateIndicator_1();
+        });
+
+        document.getElementById('heure_1').addEventListener('change', function () {
+            var savedTime_1 = this.value;
+            localStorage.setItem('savedTime_1', savedTime_1);
+            updateIndicator_1();
+        });
+
+        function updateIndicator_1() {
+            var currentDate_1 = new Date();
+            var selectedDate_1 = new Date(document.getElementById('date_1').value);
+            var selectedTime_1 = document.getElementById('heure_1').value.split(':');
+            var selectedDateTime_1 = new Date(selectedDate_1.getFullYear(), selectedDate_1.getMonth(), selectedDate_1.getDate(), selectedTime_1[0], selectedTime_1[1]);
+            var percentageText_1 = document.getElementById('percentage_1').textContent;
+            var percentageValue_1 = parseInt(percentageText_1);
+            var indicator_1 = document.getElementById('indicator_1');
+            var indicatorR_1 = document.getElementById('indicatorR_1');			
+
+            if (currentDate_1 < selectedDateTime_1) {
+                if (percentageValue_1 < 100) {
+                    indicator_1.className = 'indicator orange';//***********************************************************************************
+                    localStorage.setItem('indicatorState_1', 'green');
+                    indicatorR_1.className = 'indicatorR green';					
+                } else if (percentageValue_1 === 100) {
+                    indicator_1.className = 'indicator green';
+                    localStorage.setItem('indicatorState_1', 'green');
+                    indicatorR_1.className = 'indicatorR green';					
+                }
+            } else {
+                if (percentageValue_1 < 100) {
+                    indicator_1.className = 'indicator red';
+                    localStorage.setItem('indicatorState_1', 'red');
+                    indicatorR_1.className = 'indicatorR red';					
+                }
+            }
+        }
+        function updatePercentage_1(width) {
+            var percentageElement_1 = document.getElementById('percentage_1');
+            var percentage_1 = Math.round((width / 100) * 100) + '%';
+            percentageElement_1.textContent = percentage_1;
+			localStorage.setItem('percentage_1', percentage_1);// Sauvegarde localStorage
+        }//*******************************************************************
+
+function verifierHeure_2() {
+            var heureSelectionnee_2 = document.getElementById("heure_2").value;
+            var heureActuelle_2 = new Date().toLocaleTimeString([], {
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+
+            if (heureSelectionnee_2 === heureActuelle_2) {
+                updateIndicator_2();
+                //alert("L'heure sélectionnée est atteinte !");
+                monBouton_2.disabled = true;
+				localStorage.setItem('buttonState_2', 'disabled');// Sauvegarde l'état de monBouton_2
+			   //clearInterval(interval_2); // Arrêter la vérification
+            }
+        }
+        //var interval_2 = setInterval(verifierHeure_2, 60000); // Vérification chaque minute
+		setInterval(verifierHeure_2, 60000); // Vérification chaque minute
+		
+        var originalValue_2;
+		var inputRess_2;
+        var designationValue_2;
+
+        document.addEventListener('DOMContentLoaded', function () {//Ouverture
+            originalValue_2 = parseFloat(localStorage.getItem('inputValue_2')) || 0;
+            inputRess_2 = localStorage.getItem('inputRess_2') || '';
+            designationValue_2 = localStorage.getItem('designationValue_2') || '';
+            var barWidth_2 = parseFloat(localStorage.getItem('barWidth_2')) || 0;
+            var savedDate_2 = localStorage.getItem('savedDate_2') || '';
+            var savedTime_2 = localStorage.getItem('savedTime_2') || '';
+            var indicatorState_2 = localStorage.getItem('indicatorState_2') || '';
+			
+			var savedPercentage_2 = localStorage.getItem('percentage_2');
+			
+            document.getElementById('inputValue_2').value = originalValue_2;
+            document.getElementById('inputRess_2').value = inputRess_2;			
+            document.getElementById('designationValue_2').value = designationValue_2;
+            document.getElementById('date_2').value = savedDate_2;
+            document.getElementById('heure_2').value = savedTime_2;
+
+			createMarkers_2(originalValue_2);
+			//updateBar_2(barWidth_2);
+			if (savedPercentage_2) {// Mettre à jour la barre de progression avec le pourcentage 
+			var percentageElement_2 = document.getElementById('percentage_2');
+			percentageElement_2.textContent = savedPercentage_2;
+			var width = parseInt(savedPercentage_2) || 0;// Mettre à jour barre de progression
+			var bar_2 = document.getElementById('bar_2');
+			bar_2.style.width = width + '%';
+			}
+            if (indicatorState_2 === 'red') {
+                document.getElementById('indicator_2').className = 'indicator red';
+            } else {
+                document.getElementById('indicator_2').className = 'indicator green';
+            }
+
+			var savedIndicator_2 = localStorage.getItem('indicatorState_2');// Lire la sauvegarde de indicator_2 depuis le localStorage
+			document.getElementById('indicatorR_2').className = savedIndicator_2;// Appliquer la classe sauvegardée à l'élément indicatorR_2
+			//if (!savedIndicator_2) {// Si aucune sauvegarde n'est trouvée, définissez la classe de indicator_2 par défaut
+				//savedIndicator_2 = 'indicator green'; // Valeur par défaut
+			//}
+			var indicator_2 = document.getElementById('indicator_2');// Mettre à jour indicatorR_2 en fonction de la classe de indicator_2
+			if (indicator_2.className === 'indicator green') {
+				document.getElementById('indicatorR_2').className = 'indicator green';
+			} else if (indicator_2.className === 'indicator red') {
+				document.getElementById('indicatorR_2').className = 'indicator red';
+			}
+			var buttonState_2 = localStorage.getItem('buttonState_2');// Charger l'état du bouton depuis le localStorage
+			if (buttonState_2 === 'disabled') {// Vérifier si un état a été sauvegardé
+			monBouton_2.disabled = true;// Désactiver le bouton
+			}
+			document.getElementById('labelRess_2').textContent = document.getElementById('inputRess_2').value;
+			updateIndicator_2();
+        });
+
+        function updateBar_2(savedBarWidth_2) {
+            var inputValue_2 = document.getElementById('inputValue_2').value;
+            originalValue_2 = parseFloat(inputValue_2);
+            var bar_2 = document.getElementById('bar_2');
+            bar_2.style.width = savedBarWidth_2 + '%';
+            if (!isNaN(originalValue_2) && originalValue_2 > 0) {
+                createMarkers_2(originalValue_2);
+                localStorage.setItem('inputValue_2', originalValue_2);
+            }
+			document.getElementById('percentage_2').innerText = '0%'; // Mettre à jour ID 'percentage_2' pour afficher 0%
+            var percentage_2 = '0%'; // Initialiser la variable percentage_2 à '0%'
+			localStorage.setItem('percentage_2', percentage_2); // Sauvegarde localStorage
+            updateIndicator_2();
+			
+			monBouton_2.disabled = false;
+			localStorage.setItem('buttonState_2', 'visible');// Sauvegarde l'état de monBouton_2
+        }
+        document.getElementById('updateButton_2').addEventListener('click', function () {
+            updateBar_2(0);
+        });
+
+        function createMarkers_2(count_2) {
+            var markers_2 = document.querySelector('.quantite-markers_2');
+            markers_2.innerHTML = '';
+            for (var i_2 = 0; i_2 <= count_2; i_2++) {
+                var quantiteMarkerPosition_2 = (i_2 / count_2) * 100;
+                var marker_2 = document.createElement('div');
+                marker_2.className = 'quantite-marker_2';
+                marker_2.style.left = quantiteMarkerPosition_2 + '%';
+                markers_2.appendChild(marker_2);
+                var label_2 = document.createElement('div');
+                label_2.className = 'quantite-label_2';
+                label_2.textContent = i_2;
+                label_2.style.left = quantiteMarkerPosition_2 + '%';
+                markers_2.appendChild(label_2);
+                monBouton_2.disabled = false;
+            }
+        }
+
+        function increaseBar_2() {
+            if (originalValue_2 > 0) {
+                var bar_2 = document.getElementById('bar_2');
+                var currentWidth_2 = parseFloat(bar_2.style.width) || 0;
+                if (currentWidth_2 < 100) {
+                    var increaseAmount_2 = 100 / originalValue_2;
+                    var newWidth_2 = currentWidth_2 + increaseAmount_2;
+                    if (newWidth_2 > 100) {
+                        newWidth_2 = 100;
+                    }
+                    bar_2.style.width = newWidth_2 + '%';
+                    updatePercentage_2(newWidth_2);
+                    localStorage.setItem('barWidth_2', newWidth_2);
+                }
+            }
+            updateIndicator_2();
+        }
+
+        function decreaseBar_2() {
+            if (originalValue_2 > 0) {
+                var bar_2 = document.getElementById('bar_2');
+                var currentWidth_2 = parseFloat(bar_2.style.width) || 0;
+                if (currentWidth_2 > 0) {
+                    var decreaseAmount_2 = 100 / originalValue_2;
+                    var newWidth_2 = currentWidth_2 - decreaseAmount_2;
+                    if (newWidth_2 < 0) {
+                        newWidth_2 = 0;
+                    }
+                    bar_2.style.width = newWidth_2 + '%';
+                    updatePercentage_2(newWidth_2);
+                    localStorage.setItem('barWidth_2', newWidth_2);
+                }
+            }
+            updateIndicator_2();
+        }
+
+        document.getElementById('inputRess_2').addEventListener('input', function () {
+            inputRess_2 = this.value;
+            localStorage.setItem('inputRess_2', inputRess_2);
+			document.getElementById('labelRess_2').textContent = document.getElementById('inputRess_2').value;
+        });
+		
+        document.getElementById('designationValue_2').addEventListener('input', function () {
+            designationValue_2 = this.value;
+            localStorage.setItem('designationValue_2', designationValue_2);
+        });
+
+        document.getElementById('date_2').addEventListener('change', function () {
+            var savedDate_2 = this.value;
+            localStorage.setItem('savedDate_2', savedDate_2);
+            updateIndicator_2();
+        });
+
+        document.getElementById('heure_2').addEventListener('change', function () {
+            var savedTime_2 = this.value;
+            localStorage.setItem('savedTime_2', savedTime_2);
+            updateIndicator_2();
+        });
+
+        function updateIndicator_2() {
+            var currentDate_2 = new Date();
+            var selectedDate_2 = new Date(document.getElementById('date_2').value);
+            var selectedTime_2 = document.getElementById('heure_2').value.split(':');
+            var selectedDateTime_2 = new Date(selectedDate_2.getFullYear(), selectedDate_2.getMonth(), selectedDate_2.getDate(), selectedTime_2[0], selectedTime_2[1]);
+            var percentageText_2 = document.getElementById('percentage_2').textContent;
+            var percentageValue_2 = parseInt(percentageText_2);
+            var indicator_2 = document.getElementById('indicator_2');
+            var indicatorR_2 = document.getElementById('indicatorR_2');			
+
+            if (currentDate_2 < selectedDateTime_2) {
+                if (percentageValue_2 < 100) {
+                    indicator_2.className = 'indicator green';
+                    localStorage.setItem('indicatorState_2', 'green');
+                    indicatorR_2.className = 'indicatorR green';					
+                } else if (percentageValue_2 === 100) {
+                    indicator_2.className = 'indicator green';
+                    localStorage.setItem('indicatorState_2', 'green');
+                    indicatorR_2.className = 'indicatorR green';					
+                }
+            } else {
+                if (percentageValue_2 < 100) {
+                    indicator_2.className = 'indicator red';
+                    localStorage.setItem('indicatorState_2', 'red');
+                    indicatorR_2.className = 'indicatorR red';					
+                }
+            }
+        }
+        function updatePercentage_2(width) {
+            var percentageElement_2 = document.getElementById('percentage_2');
+            var percentage_2 = Math.round((width / 100) * 100) + '%';
+            percentageElement_2.textContent = percentage_2;
+			localStorage.setItem('percentage_2', percentage_2);// Sauvegarde localStorage
+        }//*******************************************************************
+
+function verifierHeure_3() {
+            var heureSelectionnee_3 = document.getElementById("heure_3").value;
+            var heureActuelle_3 = new Date().toLocaleTimeString([], {
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+
+            if (heureSelectionnee_3 === heureActuelle_3) {
+                updateIndicator_3();
+                //alert("L'heure sélectionnée est atteinte !");
+                monBouton_3.disabled = true;
+				localStorage.setItem('buttonState_3', 'disabled');// Sauvegarde l'état de monBouton_3
+			   //clearInterval(interval_3); // Arrêter la vérification
+            }
+        }
+        //var interval_3 = setInterval(verifierHeure_3, 60000); // Vérification chaque minute
+		setInterval(verifierHeure_3, 60000); // Vérification chaque minute
+		
+        var originalValue_3;
+		var inputRess_3;
+        var designationValue_3;
+
+        document.addEventListener('DOMContentLoaded', function () {//Ouverture
+            originalValue_3 = parseFloat(localStorage.getItem('inputValue_3')) || 0;
+            inputRess_3 = localStorage.getItem('inputRess_3') || '';
+            designationValue_3 = localStorage.getItem('designationValue_3') || '';
+            var barWidth_3 = parseFloat(localStorage.getItem('barWidth_3')) || 0;
+            var savedDate_3 = localStorage.getItem('savedDate_3') || '';
+            var savedTime_3 = localStorage.getItem('savedTime_3') || '';
+            var indicatorState_3 = localStorage.getItem('indicatorState_3') || '';
+			
+			var savedPercentage_3 = localStorage.getItem('percentage_3');
+			
+            document.getElementById('inputValue_3').value = originalValue_3;
+            document.getElementById('inputRess_3').value = inputRess_3;			
+            document.getElementById('designationValue_3').value = designationValue_3;
+            document.getElementById('date_3').value = savedDate_3;
+            document.getElementById('heure_3').value = savedTime_3;
+
+			createMarkers_3(originalValue_3);
+			//updateBar_3(barWidth_3);
+			if (savedPercentage_3) {// Mettre à jour la barre de progression avec le pourcentage 
+			var percentageElement_3 = document.getElementById('percentage_3');
+			percentageElement_3.textContent = savedPercentage_3;
+			var width = parseInt(savedPercentage_3) || 0;// Mettre à jour barre de progression
+			var bar_3 = document.getElementById('bar_3');
+			bar_3.style.width = width + '%';
+			}
+            if (indicatorState_3 === 'red') {
+                document.getElementById('indicator_3').className = 'indicator red';
+            } else {
+                document.getElementById('indicator_3').className = 'indicator green';
+            }
+			
+			var savedIndicator_3 = localStorage.getItem('indicatorState_3');// Lire la sauvegarde de indicator_3 depuis le localStorage
+			document.getElementById('indicatorR_3').className = savedIndicator_3;// Appliquer la classe sauvegardée à l'élément indicatorR_3
+			//if (!savedIndicator_3) {// Si aucune sauvegarde n'est trouvée, définissez la classe de indicator_3 par défaut
+				//savedIndicator_3 = 'indicator green'; // Valeur par défaut
+			//}
+			var indicator_3 = document.getElementById('indicator_3');// Mettre à jour indicatorR_3 en fonction de la classe de indicator_3
+			if (indicator_3.className === 'indicator green') {
+				document.getElementById('indicatorR_3').className = 'indicator green';
+			} else if (indicator_3.className === 'indicator red') {
+				document.getElementById('indicatorR_3').className = 'indicator red';
+			}
+			var buttonState_3 = localStorage.getItem('buttonState_3');// Charger l'état du bouton depuis le localStorage
+			if (buttonState_3 === 'disabled') {// Vérifier si un état a été sauvegardé
+			monBouton_3.disabled = true;// Désactiver le bouton
+			}
+			document.getElementById('labelRess_3').textContent = document.getElementById('inputRess_3').value;
+			updateIndicator_3();
+        });
+
+        function updateBar_3(savedBarWidth_3) {
+            var inputValue_3 = document.getElementById('inputValue_3').value;
+            originalValue_3 = parseFloat(inputValue_3);
+            var bar_3 = document.getElementById('bar_3');
+            bar_3.style.width = savedBarWidth_3 + '%';
+            if (!isNaN(originalValue_3) && originalValue_3 > 0) {
+                createMarkers_3(originalValue_3);
+                localStorage.setItem('inputValue_3', originalValue_3);
+            }
+			document.getElementById('percentage_3').innerText = '0%'; // Mettre à jour ID 'percentage_3' pour afficher 0%
+            var percentage_3 = '0%'; // Initialiser la variable percentage_3 à '0%'
+			localStorage.setItem('percentage_3', percentage_3); // Sauvegarde localStorage
+            updateIndicator_3();
+			
+			monBouton_3.disabled = false;
+			localStorage.setItem('buttonState_3', 'visible');// Sauvegarde l'état de monBouton_3
+        }
+        document.getElementById('updateButton_3').addEventListener('click', function () {
+            updateBar_3(0);
+        });
+
+        function createMarkers_3(count_3) {
+            var markers_3 = document.querySelector('.quantite-markers_3');
+            markers_3.innerHTML = '';
+            for (var i_3 = 0; i_3 <= count_3; i_3++) {
+                var quantiteMarkerPosition_3 = (i_3 / count_3) * 100;
+                var marker_3 = document.createElement('div');
+                marker_3.className = 'quantite-marker_3';
+                marker_3.style.left = quantiteMarkerPosition_3 + '%';
+                markers_3.appendChild(marker_3);
+                var label_3 = document.createElement('div');
+                label_3.className = 'quantite-label_3';
+                label_3.textContent = i_3;
+                label_3.style.left = quantiteMarkerPosition_3 + '%';
+                markers_3.appendChild(label_3);
+                monBouton_3.disabled = false;
+            }
+        }
+
+        function increaseBar_3() {
+            if (originalValue_3 > 0) {
+                var bar_3 = document.getElementById('bar_3');
+                var currentWidth_3 = parseFloat(bar_3.style.width) || 0;
+                if (currentWidth_3 < 100) {
+                    var increaseAmount_3 = 100 / originalValue_3;
+                    var newWidth_3 = currentWidth_3 + increaseAmount_3;
+                    if (newWidth_3 > 100) {
+                        newWidth_3 = 100;
+                    }
+                    bar_3.style.width = newWidth_3 + '%';
+                    updatePercentage_3(newWidth_3);
+                    localStorage.setItem('barWidth_3', newWidth_3);
+                }
+            }
+            updateIndicator_3();
+        }
+
+        function decreaseBar_3() {
+            if (originalValue_3 > 0) {
+                var bar_3 = document.getElementById('bar_3');
+                var currentWidth_3 = parseFloat(bar_3.style.width) || 0;
+                if (currentWidth_3 > 0) {
+                    var decreaseAmount_3 = 100 / originalValue_3;
+                    var newWidth_3 = currentWidth_3 - decreaseAmount_3;
+                    if (newWidth_3 < 0) {
+                        newWidth_3 = 0;
+                    }
+                    bar_3.style.width = newWidth_3 + '%';
+                    updatePercentage_3(newWidth_3);
+                    localStorage.setItem('barWidth_3', newWidth_3);
+                }
+            }
+            updateIndicator_3();
+        }
+
+        document.getElementById('inputRess_3').addEventListener('input', function () {
+            inputRess_3 = this.value;
+            localStorage.setItem('inputRess_3', inputRess_3);
+			document.getElementById('labelRess_3').textContent = document.getElementById('inputRess_3').value;
+        });
+		
+        document.getElementById('designationValue_3').addEventListener('input', function () {
+            designationValue_3 = this.value;
+            localStorage.setItem('designationValue_3', designationValue_3);
+        });
+
+        document.getElementById('date_3').addEventListener('change', function () {
+            var savedDate_3 = this.value;
+            localStorage.setItem('savedDate_3', savedDate_3);
+            updateIndicator_3();
+        });
+
+        document.getElementById('heure_3').addEventListener('change', function () {
+            var savedTime_3 = this.value;
+            localStorage.setItem('savedTime_3', savedTime_3);
+            updateIndicator_3();
+        });
+
+        function updateIndicator_3() {
+            var currentDate_3 = new Date();
+            var selectedDate_3 = new Date(document.getElementById('date_3').value);
+            var selectedTime_3 = document.getElementById('heure_3').value.split(':');
+            var selectedDateTime_3 = new Date(selectedDate_3.getFullYear(), selectedDate_3.getMonth(), selectedDate_3.getDate(), selectedTime_3[0], selectedTime_3[1]);
+            var percentageText_3 = document.getElementById('percentage_3').textContent;
+            var percentageValue_3 = parseInt(percentageText_3);
+            var indicator_3 = document.getElementById('indicator_3');
+            var indicatorR_3 = document.getElementById('indicatorR_3');			
+
+            if (currentDate_3 < selectedDateTime_3) {
+                if (percentageValue_3 < 100) {
+                    indicator_3.className = 'indicator green';
+                    localStorage.setItem('indicatorState_3', 'green');
+                    indicatorR_3.className = 'indicatorR green';					
+                } else if (percentageValue_3 === 100) {
+                    indicator_3.className = 'indicator green';
+                    localStorage.setItem('indicatorState_3', 'green');
+                    indicatorR_3.className = 'indicatorR green';					
+                }
+            } else {
+                if (percentageValue_3 < 100) {
+                    indicator_3.className = 'indicator red';
+                    localStorage.setItem('indicatorState_3', 'red');
+                    indicatorR_3.className = 'indicatorR red';					
+                }
+            }
+        }
+        function updatePercentage_3(width) {
+            var percentageElement_3 = document.getElementById('percentage_3');
+            var percentage_3 = Math.round((width / 100) * 100) + '%';
+            percentageElement_3.textContent = percentage_3;
+			localStorage.setItem('percentage_3', percentage_3);// Sauvegarde localStorage
+        }//*******************************************************************
+
+function verifierHeure_4() {
+            var heureSelectionnee_4 = document.getElementById("heure_4").value;
+            var heureActuelle_4 = new Date().toLocaleTimeString([], {
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+
+            if (heureSelectionnee_4 === heureActuelle_4) {
+                updateIndicator_4();
+                //alert("L'heure sélectionnée est atteinte !");
+                monBouton_4.disabled = true;
+				localStorage.setItem('buttonState_4', 'disabled');// Sauvegarde l'état de monBouton_4
+			   //clearInterval(interval_4); // Arrêter la vérification
+            }
+        }
+        //var interval_4 = setInterval(verifierHeure_4, 60000); // Vérification chaque minute
+		setInterval(verifierHeure_4, 60000); // Vérification chaque minute
+		
+        var originalValue_4;
+		var inputRess_4;
+        var designationValue_4;
+
+        document.addEventListener('DOMContentLoaded', function () {//Ouverture
+            originalValue_4 = parseFloat(localStorage.getItem('inputValue_4')) || 0;
+            inputRess_4 = localStorage.getItem('inputRess_4') || '';
+            designationValue_4 = localStorage.getItem('designationValue_4') || '';
+            var barWidth_4 = parseFloat(localStorage.getItem('barWidth_4')) || 0;
+            var savedDate_4 = localStorage.getItem('savedDate_4') || '';
+            var savedTime_4 = localStorage.getItem('savedTime_4') || '';
+            var indicatorState_4 = localStorage.getItem('indicatorState_4') || '';
+			
+			var savedPercentage_4 = localStorage.getItem('percentage_4');
+			
+            document.getElementById('inputValue_4').value = originalValue_4;
+            document.getElementById('inputRess_4').value = inputRess_4;			
+            document.getElementById('designationValue_4').value = designationValue_4;
+            document.getElementById('date_4').value = savedDate_4;
+            document.getElementById('heure_4').value = savedTime_4;
+
+			createMarkers_4(originalValue_4);
+			//updateBar_4(barWidth_4);
+			if (savedPercentage_4) {// Mettre à jour la barre de progression avec le pourcentage 
+			var percentageElement_4 = document.getElementById('percentage_4');
+			percentageElement_4.textContent = savedPercentage_4;
+			var width = parseInt(savedPercentage_4) || 0;// Mettre à jour barre de progression
+			var bar_4 = document.getElementById('bar_4');
+			bar_4.style.width = width + '%';
+			}
+            if (indicatorState_4 === 'red') {
+                document.getElementById('indicator_4').className = 'indicator red';
+            } else {
+                document.getElementById('indicator_4').className = 'indicator green';
+            }
+
+			var savedIndicator_4 = localStorage.getItem('indicatorState_4');// Lire la sauvegarde de indicator_4 depuis le localStorage
+			document.getElementById('indicatorR_4').className = savedIndicator_4;// Appliquer la classe sauvegardée à l'élément indicatorR_4
+			//if (!savedIndicator_4) {// Si aucune sauvegarde n'est trouvée, définissez la classe de indicator_4 par défaut
+				//savedIndicator_4 = 'indicator green'; // Valeur par défaut
+			//}
+			var indicator_4 = document.getElementById('indicator_4');// Mettre à jour indicatorR_4 en fonction de la classe de indicator_4
+			if (indicator_4.className === 'indicator green') {
+				document.getElementById('indicatorR_4').className = 'indicator green';
+			} else if (indicator_4.className === 'indicator red') {
+				document.getElementById('indicatorR_4').className = 'indicator red';
+			}
+			var buttonState_4 = localStorage.getItem('buttonState_4');// Charger l'état du bouton depuis le localStorage
+			if (buttonState_4 === 'disabled') {// Vérifier si un état a été sauvegardé
+			monBouton_4.disabled = true;// Désactiver le bouton
+			}
+			document.getElementById('labelRess_4').textContent = document.getElementById('inputRess_4').value;
+			updateIndicator_4();
+        });
+
+        function updateBar_4(savedBarWidth_4) {
+            var inputValue_4 = document.getElementById('inputValue_4').value;
+            originalValue_4 = parseFloat(inputValue_4);
+            var bar_4 = document.getElementById('bar_4');
+            bar_4.style.width = savedBarWidth_4 + '%';
+            if (!isNaN(originalValue_4) && originalValue_4 > 0) {
+                createMarkers_4(originalValue_4);
+                localStorage.setItem('inputValue_4', originalValue_4);
+            }
+			document.getElementById('percentage_4').innerText = '0%'; // Mettre à jour ID 'percentage_4' pour afficher 0%
+            var percentage_4 = '0%'; // Initialiser la variable percentage_4 à '0%'
+			localStorage.setItem('percentage_4', percentage_4); // Sauvegarde localStorage
+            updateIndicator_4();
+			
+			monBouton_4.disabled = false;
+			localStorage.setItem('buttonState_4', 'visible');// Sauvegarde l'état de monBouton_4
+        }
+        document.getElementById('updateButton_4').addEventListener('click', function () {
+            updateBar_4(0);
+        });
+
+        function createMarkers_4(count_4) {
+            var markers_4 = document.querySelector('.quantite-markers_4');
+            markers_4.innerHTML = '';
+            for (var i_4 = 0; i_4 <= count_4; i_4++) {
+                var quantiteMarkerPosition_4 = (i_4 / count_4) * 100;
+                var marker_4 = document.createElement('div');
+                marker_4.className = 'quantite-marker_4';
+                marker_4.style.left = quantiteMarkerPosition_4 + '%';
+                markers_4.appendChild(marker_4);
+                var label_4 = document.createElement('div');
+                label_4.className = 'quantite-label_4';
+                label_4.textContent = i_4;
+                label_4.style.left = quantiteMarkerPosition_4 + '%';
+                markers_4.appendChild(label_4);
+                monBouton_4.disabled = false;
+            }
+        }
+
+        function increaseBar_4() {
+            if (originalValue_4 > 0) {
+                var bar_4 = document.getElementById('bar_4');
+                var currentWidth_4 = parseFloat(bar_4.style.width) || 0;
+                if (currentWidth_4 < 100) {
+                    var increaseAmount_4 = 100 / originalValue_4;
+                    var newWidth_4 = currentWidth_4 + increaseAmount_4;
+                    if (newWidth_4 > 100) {
+                        newWidth_4 = 100;
+                    }
+                    bar_4.style.width = newWidth_4 + '%';
+                    updatePercentage_4(newWidth_4);
+                    localStorage.setItem('barWidth_4', newWidth_4);
+                }
+            }
+            updateIndicator_4();
+        }
+
+        function decreaseBar_4() {
+            if (originalValue_4 > 0) {
+                var bar_4 = document.getElementById('bar_4');
+                var currentWidth_4 = parseFloat(bar_4.style.width) || 0;
+                if (currentWidth_4 > 0) {
+                    var decreaseAmount_4 = 100 / originalValue_4;
+                    var newWidth_4 = currentWidth_4 - decreaseAmount_4;
+                    if (newWidth_4 < 0) {
+                        newWidth_4 = 0;
+                    }
+                    bar_4.style.width = newWidth_4 + '%';
+                    updatePercentage_4(newWidth_4);
+                    localStorage.setItem('barWidth_4', newWidth_4);
+                }
+            }
+            updateIndicator_4();
+        }
+
+        document.getElementById('inputRess_4').addEventListener('input', function () {
+            inputRess_4 = this.value;
+            localStorage.setItem('inputRess_4', inputRess_4);
+			document.getElementById('labelRess_4').textContent = document.getElementById('inputRess_4').value;
+        });
+		
+        document.getElementById('designationValue_4').addEventListener('input', function () {
+            designationValue_4 = this.value;
+            localStorage.setItem('designationValue_4', designationValue_4);
+        });
+
+        document.getElementById('date_4').addEventListener('change', function () {
+            var savedDate_4 = this.value;
+            localStorage.setItem('savedDate_4', savedDate_4);
+            updateIndicator_4();
+        });
+
+        document.getElementById('heure_4').addEventListener('change', function () {
+            var savedTime_4 = this.value;
+            localStorage.setItem('savedTime_4', savedTime_4);
+            updateIndicator_4();
+        });
+
+        function updateIndicator_4() {
+            var currentDate_4 = new Date();
+            var selectedDate_4 = new Date(document.getElementById('date_4').value);
+            var selectedTime_4 = document.getElementById('heure_4').value.split(':');
+            var selectedDateTime_4 = new Date(selectedDate_4.getFullYear(), selectedDate_4.getMonth(), selectedDate_4.getDate(), selectedTime_4[0], selectedTime_4[1]);
+            var percentageText_4 = document.getElementById('percentage_4').textContent;
+            var percentageValue_4 = parseInt(percentageText_4);
+            var indicator_4 = document.getElementById('indicator_4');
+            var indicatorR_4 = document.getElementById('indicatorR_4');			
+
+            if (currentDate_4 < selectedDateTime_4) {
+                if (percentageValue_4 < 100) {
+                    indicator_4.className = 'indicator green';
+                    localStorage.setItem('indicatorState_4', 'green');
+                    indicatorR_4.className = 'indicatorR green';					
+                } else if (percentageValue_4 === 100) {
+                    indicator_4.className = 'indicator green';
+                    localStorage.setItem('indicatorState_4', 'green');
+                    indicatorR_4.className = 'indicatorR green';					
+                }
+            } else {
+                if (percentageValue_4 < 100) {
+                    indicator_4.className = 'indicator red';
+                    localStorage.setItem('indicatorState_4', 'red');
+                    indicatorR_4.className = 'indicatorR red';					
+                }
+            }
+        }
+        function updatePercentage_4(width) {
+            var percentageElement_4 = document.getElementById('percentage_4');
+            var percentage_4 = Math.round((width / 100) * 100) + '%';
+            percentageElement_4.textContent = percentage_4;
+			localStorage.setItem('percentage_4', percentage_4);// Sauvegarde localStorage
+        }//*******************************************************************
+
+function verifierHeure_5() {
+            var heureSelectionnee_5 = document.getElementById("heure_5").value;
+            var heureActuelle_5 = new Date().toLocaleTimeString([], {
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+
+            if (heureSelectionnee_5 === heureActuelle_5) {
+                updateIndicator_5();
+                //alert("L'heure sélectionnée est atteinte !");
+                monBouton_5.disabled = true;
+				localStorage.setItem('buttonState_5', 'disabled');// Sauvegarde l'état de monBouton_5
+			   //clearInterval(interval_5); // Arrêter la vérification
+            }
+        }
+        //var interval_5 = setInterval(verifierHeure_5, 60000); // Vérification chaque minute
+		setInterval(verifierHeure_5, 60000); // Vérification chaque minute
+		
+        var originalValue_5;
+		var inputRess_5;
+        var designationValue_5;
+
+        document.addEventListener('DOMContentLoaded', function () {//Ouverture
+            originalValue_5 = parseFloat(localStorage.getItem('inputValue_5')) || 0;
+            inputRess_5 = localStorage.getItem('inputRess_5') || '';
+            designationValue_5 = localStorage.getItem('designationValue_5') || '';
+            var barWidth_5 = parseFloat(localStorage.getItem('barWidth_5')) || 0;
+            var savedDate_5 = localStorage.getItem('savedDate_5') || '';
+            var savedTime_5 = localStorage.getItem('savedTime_5') || '';
+            var indicatorState_5 = localStorage.getItem('indicatorState_5') || '';
+			
+			var savedPercentage_5 = localStorage.getItem('percentage_5');
+			
+            document.getElementById('inputValue_5').value = originalValue_5;
+            document.getElementById('inputRess_5').value = inputRess_5;			
+            document.getElementById('designationValue_5').value = designationValue_5;
+            document.getElementById('date_5').value = savedDate_5;
+            document.getElementById('heure_5').value = savedTime_5;
+
+			createMarkers_5(originalValue_5);
+			//updateBar_5(barWidth_5);
+			if (savedPercentage_5) {// Mettre à jour la barre de progression avec le pourcentage 
+			var percentageElement_5 = document.getElementById('percentage_5');
+			percentageElement_5.textContent = savedPercentage_5;
+			var width = parseInt(savedPercentage_5) || 0;// Mettre à jour barre de progression
+			var bar_5 = document.getElementById('bar_5');
+			bar_5.style.width = width + '%';
+			}
+            if (indicatorState_5 === 'red') {
+                document.getElementById('indicator_5').className = 'indicator red';
+            } else {
+                document.getElementById('indicator_5').className = 'indicator green';
+            }
+
+			var savedIndicator_5 = localStorage.getItem('indicatorState_5');// Lire la sauvegarde de indicator_5 depuis le localStorage
+			document.getElementById('indicatorR_5').className = savedIndicator_5;// Appliquer la classe sauvegardée à l'élément indicatorR_5
+			//if (!savedIndicator_5) {// Si aucune sauvegarde n'est trouvée, définissez la classe de indicator_5 par défaut
+				//savedIndicator_5 = 'indicator green'; // Valeur par défaut
+			//}
+			var indicator_5 = document.getElementById('indicator_5');// Mettre à jour indicatorR_5 en fonction de la classe de indicator_5
+			if (indicator_5.className === 'indicator green') {
+				document.getElementById('indicatorR_5').className = 'indicator green';
+			} else if (indicator_5.className === 'indicator red') {
+				document.getElementById('indicatorR_5').className = 'indicator red';
+			}
+			var buttonState_5 = localStorage.getItem('buttonState_5');// Charger l'état du bouton depuis le localStorage
+			if (buttonState_5 === 'disabled') {// Vérifier si un état a été sauvegardé
+			monBouton_5.disabled = true;// Désactiver le bouton
+			}
+			document.getElementById('labelRess_5').textContent = document.getElementById('inputRess_5').value;
+			            updateIndicator_5();
+        });
+
+        function updateBar_5(savedBarWidth_5) {
+            var inputValue_5 = document.getElementById('inputValue_5').value;
+            originalValue_5 = parseFloat(inputValue_5);
+            var bar_5 = document.getElementById('bar_5');
+            bar_5.style.width = savedBarWidth_5 + '%';
+            if (!isNaN(originalValue_5) && originalValue_5 > 0) {
+                createMarkers_5(originalValue_5);
+                localStorage.setItem('inputValue_5', originalValue_5);
+            }
+			document.getElementById('percentage_5').innerText = '0%'; // Mettre à jour ID 'percentage_5' pour afficher 0%
+            var percentage_5 = '0%'; // Initialiser la variable percentage_5 à '0%'
+			localStorage.setItem('percentage_5', percentage_5); // Sauvegarde localStorage
+            updateIndicator_5();
+			
+			monBouton_5.disabled = false;
+			localStorage.setItem('buttonState_5', 'visible');// Sauvegarde l'état de monBouton_5
+        }
+        document.getElementById('updateButton_5').addEventListener('click', function () {
+            updateBar_5(0);
+        });
+
+        function createMarkers_5(count_5) {
+            var markers_5 = document.querySelector('.quantite-markers_5');
+            markers_5.innerHTML = '';
+            for (var i_5 = 0; i_5 <= count_5; i_5++) {
+                var quantiteMarkerPosition_5 = (i_5 / count_5) * 100;
+                var marker_5 = document.createElement('div');
+                marker_5.className = 'quantite-marker_5';
+                marker_5.style.left = quantiteMarkerPosition_5 + '%';
+                markers_5.appendChild(marker_5);
+                var label_5 = document.createElement('div');
+                label_5.className = 'quantite-label_5';
+                label_5.textContent = i_5;
+                label_5.style.left = quantiteMarkerPosition_5 + '%';
+                markers_5.appendChild(label_5);
+                monBouton_5.disabled = false;
+            }
+        }
+
+        function increaseBar_5() {
+            if (originalValue_5 > 0) {
+                var bar_5 = document.getElementById('bar_5');
+                var currentWidth_5 = parseFloat(bar_5.style.width) || 0;
+                if (currentWidth_5 < 100) {
+                    var increaseAmount_5 = 100 / originalValue_5;
+                    var newWidth_5 = currentWidth_5 + increaseAmount_5;
+                    if (newWidth_5 > 100) {
+                        newWidth_5 = 100;
+                    }
+                    bar_5.style.width = newWidth_5 + '%';
+                    updatePercentage_5(newWidth_5);
+                    localStorage.setItem('barWidth_5', newWidth_5);
+                }
+            }
+            updateIndicator_5();
+        }
+
+        function decreaseBar_5() {
+            if (originalValue_5 > 0) {
+                var bar_5 = document.getElementById('bar_5');
+                var currentWidth_5 = parseFloat(bar_5.style.width) || 0;
+                if (currentWidth_5 > 0) {
+                    var decreaseAmount_5 = 100 / originalValue_5;
+                    var newWidth_5 = currentWidth_5 - decreaseAmount_5;
+                    if (newWidth_5 < 0) {
+                        newWidth_5 = 0;
+                    }
+                    bar_5.style.width = newWidth_5 + '%';
+                    updatePercentage_5(newWidth_5);
+                    localStorage.setItem('barWidth_5', newWidth_5);
+                }
+            }
+            updateIndicator_5();
+        }
+
+        document.getElementById('inputRess_5').addEventListener('input', function () {
+            inputRess_5 = this.value;
+            localStorage.setItem('inputRess_5', inputRess_5);
+			document.getElementById('labelRess_5').textContent = document.getElementById('inputRess_5').value;
+        });
+		
+        document.getElementById('designationValue_5').addEventListener('input', function () {
+            designationValue_5 = this.value;
+            localStorage.setItem('designationValue_5', designationValue_5);
+        });
+
+        document.getElementById('date_5').addEventListener('change', function () {
+            var savedDate_5 = this.value;
+            localStorage.setItem('savedDate_5', savedDate_5);
+            updateIndicator_5();
+        });
+
+        document.getElementById('heure_5').addEventListener('change', function () {
+            var savedTime_5 = this.value;
+            localStorage.setItem('savedTime_5', savedTime_5);
+            updateIndicator_5();
+        });
+
+        function updateIndicator_5() {
+            var currentDate_5 = new Date();
+            var selectedDate_5 = new Date(document.getElementById('date_5').value);
+            var selectedTime_5 = document.getElementById('heure_5').value.split(':');
+            var selectedDateTime_5 = new Date(selectedDate_5.getFullYear(), selectedDate_5.getMonth(), selectedDate_5.getDate(), selectedTime_5[0], selectedTime_5[1]);
+            var percentageText_5 = document.getElementById('percentage_5').textContent;
+            var percentageValue_5 = parseInt(percentageText_5);
+            var indicator_5 = document.getElementById('indicator_5');
+            var indicatorR_5 = document.getElementById('indicatorR_5');			
+
+            if (currentDate_5 < selectedDateTime_5) {
+                if (percentageValue_5 < 100) {
+                    indicator_5.className = 'indicator green';
+                    localStorage.setItem('indicatorState_5', 'green');
+                    indicatorR_5.className = 'indicatorR green';					
+                } else if (percentageValue_5 === 100) {
+                    indicator_5.className = 'indicator green';
+                    localStorage.setItem('indicatorState_5', 'green');
+                    indicatorR_5.className = 'indicatorR green';					
+                }
+            } else {
+                if (percentageValue_5 < 100) {
+                    indicator_5.className = 'indicator red';
+                    localStorage.setItem('indicatorState_5', 'red');
+                    indicatorR_5.className = 'indicatorR red';					
+                }
+            }
+        }
+        function updatePercentage_5(width) {
+            var percentageElement_5 = document.getElementById('percentage_5');
+            var percentage_5 = Math.round((width / 100) * 100) + '%';
+            percentageElement_5.textContent = percentage_5;
+			localStorage.setItem('percentage_5', percentage_5);// Sauvegarde localStorage
+        }//*******************************************************************
+
+function verifierHeure_6() {
+            var heureSelectionnee_6 = document.getElementById("heure_6").value;
+            var heureActuelle_6 = new Date().toLocaleTimeString([], {
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+
+            if (heureSelectionnee_6 === heureActuelle_6) {
+                updateIndicator_6();
+                //alert("L'heure sélectionnée est atteinte !");
+                monBouton_6.disabled = true;
+				localStorage.setItem('buttonState_6', 'disabled');// Sauvegarde l'état de monBouton_6
+			   //clearInterval(interval_6); // Arrêter la vérification
+            }
+        }
+        //var interval_6 = setInterval(verifierHeure_6, 60000); // Vérification chaque minute
+		setInterval(verifierHeure_6, 60000); // Vérification chaque minute
+		
+        var originalValue_6;
+		var inputRess_6;
+        var designationValue_6;
+
+        document.addEventListener('DOMContentLoaded', function () {//Ouverture
+            originalValue_6 = parseFloat(localStorage.getItem('inputValue_6')) || 0;
+            inputRess_6 = localStorage.getItem('inputRess_6') || '';
+            designationValue_6 = localStorage.getItem('designationValue_6') || '';
+            var barWidth_6 = parseFloat(localStorage.getItem('barWidth_6')) || 0;
+            var savedDate_6 = localStorage.getItem('savedDate_6') || '';
+            var savedTime_6 = localStorage.getItem('savedTime_6') || '';
+            var indicatorState_6 = localStorage.getItem('indicatorState_6') || '';
+			
+			var savedPercentage_6 = localStorage.getItem('percentage_6');
+			
+            document.getElementById('inputValue_6').value = originalValue_6;
+            document.getElementById('inputRess_6').value = inputRess_6;			
+            document.getElementById('designationValue_6').value = designationValue_6;
+            document.getElementById('date_6').value = savedDate_6;
+            document.getElementById('heure_6').value = savedTime_6;
+
+			createMarkers_6(originalValue_6);
+			//updateBar_6(barWidth_6);
+			if (savedPercentage_6) {// Mettre à jour la barre de progression avec le pourcentage 
+			var percentageElement_6 = document.getElementById('percentage_6');
+			percentageElement_6.textContent = savedPercentage_6;
+			var width = parseInt(savedPercentage_6) || 0;// Mettre à jour barre de progression
+			var bar_6 = document.getElementById('bar_6');
+			bar_6.style.width = width + '%';
+			}
+            if (indicatorState_6 === 'red') {
+                document.getElementById('indicator_6').className = 'indicator red';
+            } else {
+                document.getElementById('indicator_6').className = 'indicator green';
+            }
+			var savedIndicator_6 = localStorage.getItem('indicatorState_6');// Lire la sauvegarde de indicator_6 depuis le localStorage
+			document.getElementById('indicatorR_6').className = savedIndicator_6;// Appliquer la classe sauvegardée à l'élément indicatorR_6
+			//if (!savedIndicator_6) {// Si aucune sauvegarde n'est trouvée, définissez la classe de indicator_6 par défaut
+				//savedIndicator_6 = 'indicator green'; // Valeur par défaut
+			//}
+			var indicator_6 = document.getElementById('indicator_6');// Mettre à jour indicatorR_6 en fonction de la classe de indicator_6
+			if (indicator_6.className === 'indicator green') {
+				document.getElementById('indicatorR_6').className = 'indicator green';
+			} else if (indicator_6.className === 'indicator red') {
+				document.getElementById('indicatorR_6').className = 'indicator red';
+			}
+			var buttonState_6 = localStorage.getItem('buttonState_6');// Charger l'état du bouton depuis le localStorage
+			if (buttonState_6 === 'disabled') {// Vérifier si un état a été sauvegardé
+			monBouton_6.disabled = true;// Désactiver le bouton
+			}
+			document.getElementById('labelRess_6').textContent = document.getElementById('inputRess_6').value;
+			            updateIndicator_6();
+        });
+
+        function updateBar_6(savedBarWidth_6) {
+            var inputValue_6 = document.getElementById('inputValue_6').value;
+            originalValue_6 = parseFloat(inputValue_6);
+            var bar_6 = document.getElementById('bar_6');
+            bar_6.style.width = savedBarWidth_6 + '%';
+            if (!isNaN(originalValue_6) && originalValue_6 > 0) {
+                createMarkers_6(originalValue_6);
+                localStorage.setItem('inputValue_6', originalValue_6);
+            }
+			document.getElementById('percentage_6').innerText = '0%'; // Mettre à jour ID 'percentage_6' pour afficher 0%
+            var percentage_6 = '0%'; // Initialiser la variable percentage_6 à '0%'
+			localStorage.setItem('percentage_6', percentage_6); // Sauvegarde localStorage
+            updateIndicator_6();
+			
+			monBouton_6.disabled = false;
+			localStorage.setItem('buttonState_6', 'visible');// Sauvegarde l'état de monBouton_6
+        }
+        document.getElementById('updateButton_6').addEventListener('click', function () {
+            updateBar_6(0);
+        });
+
+        function createMarkers_6(count_6) {
+            var markers_6 = document.querySelector('.quantite-markers_6');
+            markers_6.innerHTML = '';
+            for (var i_6 = 0; i_6 <= count_6; i_6++) {
+                var quantiteMarkerPosition_6 = (i_6 / count_6) * 100;
+                var marker_6 = document.createElement('div');
+                marker_6.className = 'quantite-marker_6';
+                marker_6.style.left = quantiteMarkerPosition_6 + '%';
+                markers_6.appendChild(marker_6);
+                var label_6 = document.createElement('div');
+                label_6.className = 'quantite-label_6';
+                label_6.textContent = i_6;
+                label_6.style.left = quantiteMarkerPosition_6 + '%';
+                markers_6.appendChild(label_6);
+                monBouton_6.disabled = false;
+            }
+        }
+
+        function increaseBar_6() {
+            if (originalValue_6 > 0) {
+                var bar_6 = document.getElementById('bar_6');
+                var currentWidth_6 = parseFloat(bar_6.style.width) || 0;
+                if (currentWidth_6 < 100) {
+                    var increaseAmount_6 = 100 / originalValue_6;
+                    var newWidth_6 = currentWidth_6 + increaseAmount_6;
+                    if (newWidth_6 > 100) {
+                        newWidth_6 = 100;
+                    }
+                    bar_6.style.width = newWidth_6 + '%';
+                    updatePercentage_6(newWidth_6);
+                    localStorage.setItem('barWidth_6', newWidth_6);
+                }
+            }
+            updateIndicator_6();
+        }
+
+        function decreaseBar_6() {
+            if (originalValue_6 > 0) {
+                var bar_6 = document.getElementById('bar_6');
+                var currentWidth_6 = parseFloat(bar_6.style.width) || 0;
+                if (currentWidth_6 > 0) {
+                    var decreaseAmount_6 = 100 / originalValue_6;
+                    var newWidth_6 = currentWidth_6 - decreaseAmount_6;
+                    if (newWidth_6 < 0) {
+                        newWidth_6 = 0;
+                    }
+                    bar_6.style.width = newWidth_6 + '%';
+                    updatePercentage_6(newWidth_6);
+                    localStorage.setItem('barWidth_6', newWidth_6);
+                }
+            }
+            updateIndicator_6();
+        }
+
+        document.getElementById('inputRess_6').addEventListener('input', function () {
+            inputRess_6 = this.value;
+            localStorage.setItem('inputRess_6', inputRess_6);
+			document.getElementById('labelRess_6').textContent = document.getElementById('inputRess_6').value;
+        });
+		
+        document.getElementById('designationValue_6').addEventListener('input', function () {
+            designationValue_6 = this.value;
+            localStorage.setItem('designationValue_6', designationValue_6);
+        });
+
+        document.getElementById('date_6').addEventListener('change', function () {
+            var savedDate_6 = this.value;
+            localStorage.setItem('savedDate_6', savedDate_6);
+            updateIndicator_6();
+        });
+
+        document.getElementById('heure_6').addEventListener('change', function () {
+            var savedTime_6 = this.value;
+            localStorage.setItem('savedTime_6', savedTime_6);
+            updateIndicator_6();
+        });
+
+        function updateIndicator_6() {
+            var currentDate_6 = new Date();
+            var selectedDate_6 = new Date(document.getElementById('date_6').value);
+            var selectedTime_6 = document.getElementById('heure_6').value.split(':');
+            var selectedDateTime_6 = new Date(selectedDate_6.getFullYear(), selectedDate_6.getMonth(), selectedDate_6.getDate(), selectedTime_6[0], selectedTime_6[1]);
+            var percentageText_6 = document.getElementById('percentage_6').textContent;
+            var percentageValue_6 = parseInt(percentageText_6);
+            var indicator_6 = document.getElementById('indicator_6');
+            var indicatorR_6 = document.getElementById('indicatorR_6');			
+
+            if (currentDate_6 < selectedDateTime_6) {
+                if (percentageValue_6 < 100) {
+                    indicator_6.className = 'indicator green';
+                    localStorage.setItem('indicatorState_6', 'green');
+                    indicatorR_6.className = 'indicatorR green';					
+                } else if (percentageValue_6 === 100) {
+                    indicator_6.className = 'indicator green';
+                    localStorage.setItem('indicatorState_6', 'green');
+                    indicatorR_6.className = 'indicatorR green';					
+                }
+            } else {
+                if (percentageValue_6 < 100) {
+                    indicator_6.className = 'indicator red';
+                    localStorage.setItem('indicatorState_6', 'red');
+                    indicatorR_6.className = 'indicatorR red';					
+                }
+            }
+        }
+        function updatePercentage_6(width) {
+            var percentageElement_6 = document.getElementById('percentage_6');
+            var percentage_6 = Math.round((width / 100) * 100) + '%';
+            percentageElement_6.textContent = percentage_6;
+			localStorage.setItem('percentage_6', percentage_6);// Sauvegarde localStorage
+        }//*******************************************************************
+
+function verifierHeure_7() {
+            var heureSelectionnee_7 = document.getElementById("heure_7").value;
+            var heureActuelle_7 = new Date().toLocaleTimeString([], {
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+
+            if (heureSelectionnee_7 === heureActuelle_7) {
+                updateIndicator_7();
+                //alert("L'heure sélectionnée est atteinte !");
+                monBouton_7.disabled = true;
+				localStorage.setItem('buttonState_7', 'disabled');// Sauvegarde l'état de monBouton_7
+			   //clearInterval(interval_7); // Arrêter la vérification
+            }
+        }
+        //var interval_7 = setInterval(verifierHeure_7, 60000); // Vérification chaque minute
+		setInterval(verifierHeure_7, 60000); // Vérification chaque minute
+		
+        var originalValue_7;
+		var inputRess_7;
+        var designationValue_7;
+
+        document.addEventListener('DOMContentLoaded', function () {//Ouverture
+            originalValue_7 = parseFloat(localStorage.getItem('inputValue_7')) || 0;
+            inputRess_7 = localStorage.getItem('inputRess_7') || '';
+            designationValue_7 = localStorage.getItem('designationValue_7') || '';
+            var barWidth_7 = parseFloat(localStorage.getItem('barWidth_7')) || 0;
+            var savedDate_7 = localStorage.getItem('savedDate_7') || '';
+            var savedTime_7 = localStorage.getItem('savedTime_7') || '';
+            var indicatorState_7 = localStorage.getItem('indicatorState_7') || '';
+			
+			var savedPercentage_7 = localStorage.getItem('percentage_7');
+			
+            document.getElementById('inputValue_7').value = originalValue_7;
+            document.getElementById('inputRess_7').value = inputRess_7;			
+            document.getElementById('designationValue_7').value = designationValue_7;
+            document.getElementById('date_7').value = savedDate_7;
+            document.getElementById('heure_7').value = savedTime_7;
+
+			createMarkers_7(originalValue_7);
+			//updateBar_7(barWidth_7);
+			if (savedPercentage_7) {// Mettre à jour la barre de progression avec le pourcentage 
+			var percentageElement_7 = document.getElementById('percentage_7');
+			percentageElement_7.textContent = savedPercentage_7;
+			var width = parseInt(savedPercentage_7) || 0;// Mettre à jour barre de progression
+			var bar_7 = document.getElementById('bar_7');
+			bar_7.style.width = width + '%';
+			}
+            if (indicatorState_7 === 'red') {
+                document.getElementById('indicator_7').className = 'indicator red';
+            } else {
+                document.getElementById('indicator_7').className = 'indicator green';
+            }
+			var savedIndicator_7 = localStorage.getItem('indicatorState_7');// Lire la sauvegarde de indicator_7 depuis le localStorage
+			document.getElementById('indicatorR_7').className = savedIndicator_7;// Appliquer la classe sauvegardée à l'élément indicatorR_7
+			//if (!savedIndicator_7) {// Si aucune sauvegarde n'est trouvée, définissez la classe de indicator_7 par défaut
+				//savedIndicator_7 = 'indicator green'; // Valeur par défaut
+			//}
+			var indicator_7 = document.getElementById('indicator_7');// Mettre à jour indicatorR_7 en fonction de la classe de indicator_7
+			if (indicator_7.className === 'indicator green') {
+				document.getElementById('indicatorR_7').className = 'indicator green';
+			} else if (indicator_7.className === 'indicator red') {
+				document.getElementById('indicatorR_7').className = 'indicator red';
+			}
+			var buttonState_7 = localStorage.getItem('buttonState_7');// Charger l'état du bouton depuis le localStorage
+			if (buttonState_7 === 'disabled') {// Vérifier si un état a été sauvegardé
+			monBouton_7.disabled = true;// Désactiver le bouton
+			}
+			document.getElementById('labelRess_7').textContent = document.getElementById('inputRess_7').value;
+			            updateIndicator_7();
+        });
+
+        function updateBar_7(savedBarWidth_7) {
+            var inputValue_7 = document.getElementById('inputValue_7').value;
+            originalValue_7 = parseFloat(inputValue_7);
+            var bar_7 = document.getElementById('bar_7');
+            bar_7.style.width = savedBarWidth_7 + '%';
+            if (!isNaN(originalValue_7) && originalValue_7 > 0) {
+                createMarkers_7(originalValue_7);
+                localStorage.setItem('inputValue_7', originalValue_7);
+            }
+			document.getElementById('percentage_7').innerText = '0%'; // Mettre à jour ID 'percentage_7' pour afficher 0%
+            var percentage_7 = '0%'; // Initialiser la variable percentage_7 à '0%'
+			localStorage.setItem('percentage_7', percentage_7); // Sauvegarde localStorage
+            updateIndicator_7();
+			
+			monBouton_7.disabled = false;
+			localStorage.setItem('buttonState_7', 'visible');// Sauvegarde l'état de monBouton_7
+        }
+        document.getElementById('updateButton_7').addEventListener('click', function () {
+            updateBar_7(0);
+        });
+
+        function createMarkers_7(count_7) {
+            var markers_7 = document.querySelector('.quantite-markers_7');
+            markers_7.innerHTML = '';
+            for (var i_7 = 0; i_7 <= count_7; i_7++) {
+                var quantiteMarkerPosition_7 = (i_7 / count_7) * 100;
+                var marker_7 = document.createElement('div');
+                marker_7.className = 'quantite-marker_7';
+                marker_7.style.left = quantiteMarkerPosition_7 + '%';
+                markers_7.appendChild(marker_7);
+                var label_7 = document.createElement('div');
+                label_7.className = 'quantite-label_7';
+                label_7.textContent = i_7;
+                label_7.style.left = quantiteMarkerPosition_7 + '%';
+                markers_7.appendChild(label_7);
+                monBouton_7.disabled = false;
+            }
+        }
+
+        function increaseBar_7() {
+            if (originalValue_7 > 0) {
+                var bar_7 = document.getElementById('bar_7');
+                var currentWidth_7 = parseFloat(bar_7.style.width) || 0;
+                if (currentWidth_7 < 100) {
+                    var increaseAmount_7 = 100 / originalValue_7;
+                    var newWidth_7 = currentWidth_7 + increaseAmount_7;
+                    if (newWidth_7 > 100) {
+                        newWidth_7 = 100;
+                    }
+                    bar_7.style.width = newWidth_7 + '%';
+                    updatePercentage_7(newWidth_7);
+                    localStorage.setItem('barWidth_7', newWidth_7);
+                }
+            }
+            updateIndicator_7();
+        }
+
+        function decreaseBar_7() {
+            if (originalValue_7 > 0) {
+                var bar_7 = document.getElementById('bar_7');
+                var currentWidth_7 = parseFloat(bar_7.style.width) || 0;
+                if (currentWidth_7 > 0) {
+                    var decreaseAmount_7 = 100 / originalValue_7;
+                    var newWidth_7 = currentWidth_7 - decreaseAmount_7;
+                    if (newWidth_7 < 0) {
+                        newWidth_7 = 0;
+                    }
+                    bar_7.style.width = newWidth_7 + '%';
+                    updatePercentage_7(newWidth_7);
+                    localStorage.setItem('barWidth_7', newWidth_7);
+                }
+            }
+            updateIndicator_7();
+        }
+
+        document.getElementById('inputRess_7').addEventListener('input', function () {
+            inputRess_7 = this.value;
+            localStorage.setItem('inputRess_7', inputRess_7);
+			document.getElementById('labelRess_7').textContent = document.getElementById('inputRess_7').value;
+        });
+		
+        document.getElementById('designationValue_7').addEventListener('input', function () {
+            designationValue_7 = this.value;
+            localStorage.setItem('designationValue_7', designationValue_7);
+        });
+
+        document.getElementById('date_7').addEventListener('change', function () {
+            var savedDate_7 = this.value;
+            localStorage.setItem('savedDate_7', savedDate_7);
+            updateIndicator_7();
+        });
+
+        document.getElementById('heure_7').addEventListener('change', function () {
+            var savedTime_7 = this.value;
+            localStorage.setItem('savedTime_7', savedTime_7);
+            updateIndicator_7();
+        });
+
+        function updateIndicator_7() {
+            var currentDate_7 = new Date();
+            var selectedDate_7 = new Date(document.getElementById('date_7').value);
+            var selectedTime_7 = document.getElementById('heure_7').value.split(':');
+            var selectedDateTime_7 = new Date(selectedDate_7.getFullYear(), selectedDate_7.getMonth(), selectedDate_7.getDate(), selectedTime_7[0], selectedTime_7[1]);
+            var percentageText_7 = document.getElementById('percentage_7').textContent;
+            var percentageValue_7 = parseInt(percentageText_7);
+            var indicator_7 = document.getElementById('indicator_7');
+            var indicatorR_7 = document.getElementById('indicatorR_7');			
+
+            if (currentDate_7 < selectedDateTime_7) {
+                if (percentageValue_7 < 100) {
+                    indicator_7.className = 'indicator green';
+                    localStorage.setItem('indicatorState_7', 'green');
+                    indicatorR_7.className = 'indicatorR green';					
+                } else if (percentageValue_7 === 100) {
+                    indicator_7.className = 'indicator green';
+                    localStorage.setItem('indicatorState_7', 'green');
+                    indicatorR_7.className = 'indicatorR green';					
+                }
+            } else {
+                if (percentageValue_7 < 100) {
+                    indicator_7.className = 'indicator red';
+                    localStorage.setItem('indicatorState_7', 'red');
+                    indicatorR_7.className = 'indicatorR red';					
+                }
+            }
+        }
+        function updatePercentage_7(width) {
+            var percentageElement_7 = document.getElementById('percentage_7');
+            var percentage_7 = Math.round((width / 100) * 100) + '%';
+            percentageElement_7.textContent = percentage_7;
+			localStorage.setItem('percentage_7', percentage_7);// Sauvegarde localStorage
+        }//*******************************************************************
+
+function verifierHeure_8() {
+            var heureSelectionnee_8 = document.getElementById("heure_8").value;
+            var heureActuelle_8 = new Date().toLocaleTimeString([], {
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+
+            if (heureSelectionnee_8 === heureActuelle_8) {
+                updateIndicator_8();
+                //alert("L'heure sélectionnée est atteinte !");
+                monBouton_8.disabled = true;
+				localStorage.setItem('buttonState_8', 'disabled');// Sauvegarde l'état de monBouton_8
+			   //clearInterval(interval_8); // Arrêter la vérification
+            }
+        }
+        //var interval_8 = setInterval(verifierHeure_8, 60000); // Vérification chaque minute
+		setInterval(verifierHeure_8, 60000); // Vérification chaque minute
+		
+        var originalValue_8;
+		var inputRess_8;
+        var designationValue_8;
+
+        document.addEventListener('DOMContentLoaded', function () {//Ouverture
+            originalValue_8 = parseFloat(localStorage.getItem('inputValue_8')) || 0;
+            inputRess_8 = localStorage.getItem('inputRess_8') || '';
+            designationValue_8 = localStorage.getItem('designationValue_8') || '';
+            var barWidth_8 = parseFloat(localStorage.getItem('barWidth_8')) || 0;
+            var savedDate_8 = localStorage.getItem('savedDate_8') || '';
+            var savedTime_8 = localStorage.getItem('savedTime_8') || '';
+            var indicatorState_8 = localStorage.getItem('indicatorState_8') || '';
+			
+			var savedPercentage_8 = localStorage.getItem('percentage_8');
+			
+            document.getElementById('inputValue_8').value = originalValue_8;
+            document.getElementById('inputRess_8').value = inputRess_8;			
+            document.getElementById('designationValue_8').value = designationValue_8;
+            document.getElementById('date_8').value = savedDate_8;
+            document.getElementById('heure_8').value = savedTime_8;
+
+			createMarkers_8(originalValue_8);
+			//updateBar_8(barWidth_8);
+			if (savedPercentage_8) {// Mettre à jour la barre de progression avec le pourcentage 
+			var percentageElement_8 = document.getElementById('percentage_8');
+			percentageElement_8.textContent = savedPercentage_8;
+			var width = parseInt(savedPercentage_8) || 0;// Mettre à jour barre de progression
+			var bar_8 = document.getElementById('bar_8');
+			bar_8.style.width = width + '%';
+			}
+            if (indicatorState_8 === 'red') {
+                document.getElementById('indicator_8').className = 'indicator red';
+            } else {
+                document.getElementById('indicator_8').className = 'indicator green';
+            }
+			var savedIndicator_8 = localStorage.getItem('indicatorState_8');// Lire la sauvegarde de indicator_8 depuis le localStorage
+			document.getElementById('indicatorR_8').className = savedIndicator_8;// Appliquer la classe sauvegardée à l'élément indicatorR_8
+			//if (!savedIndicator_8) {// Si aucune sauvegarde n'est trouvée, définissez la classe de indicator_8 par défaut
+				//savedIndicator_8 = 'indicator green'; // Valeur par défaut
+			//}
+			var indicator_8 = document.getElementById('indicator_8');// Mettre à jour indicatorR_8 en fonction de la classe de indicator_8
+			if (indicator_8.className === 'indicator green') {
+				document.getElementById('indicatorR_8').className = 'indicator green';
+			} else if (indicator_8.className === 'indicator red') {
+				document.getElementById('indicatorR_8').className = 'indicator red';
+			}
+			var buttonState_8 = localStorage.getItem('buttonState_8');// Charger l'état du bouton depuis le localStorage
+			if (buttonState_8 === 'disabled') {// Vérifier si un état a été sauvegardé
+			monBouton_8.disabled = true;// Désactiver le bouton
+			}
+			document.getElementById('labelRess_8').textContent = document.getElementById('inputRess_8').value;
+			            updateIndicator_8();
+        });
+
+        function updateBar_8(savedBarWidth_8) {
+            var inputValue_8 = document.getElementById('inputValue_8').value;
+            originalValue_8 = parseFloat(inputValue_8);
+            var bar_8 = document.getElementById('bar_8');
+            bar_8.style.width = savedBarWidth_8 + '%';
+            if (!isNaN(originalValue_8) && originalValue_8 > 0) {
+                createMarkers_8(originalValue_8);
+                localStorage.setItem('inputValue_8', originalValue_8);
+            }
+			document.getElementById('percentage_8').innerText = '0%'; // Mettre à jour ID 'percentage_8' pour afficher 0%
+            var percentage_8 = '0%'; // Initialiser la variable percentage_8 à '0%'
+			localStorage.setItem('percentage_8', percentage_8); // Sauvegarde localStorage
+            updateIndicator_8();
+			
+			monBouton_8.disabled = false;
+			localStorage.setItem('buttonState_8', 'visible');// Sauvegarde l'état de monBouton_8
+        }
+        document.getElementById('updateButton_8').addEventListener('click', function () {
+            updateBar_8(0);
+        });
+
+        function createMarkers_8(count_8) {
+            var markers_8 = document.querySelector('.quantite-markers_8');
+            markers_8.innerHTML = '';
+            for (var i_8 = 0; i_8 <= count_8; i_8++) {
+                var quantiteMarkerPosition_8 = (i_8 / count_8) * 100;
+                var marker_8 = document.createElement('div');
+                marker_8.className = 'quantite-marker_8';
+                marker_8.style.left = quantiteMarkerPosition_8 + '%';
+                markers_8.appendChild(marker_8);
+                var label_8 = document.createElement('div');
+                label_8.className = 'quantite-label_8';
+                label_8.textContent = i_8;
+                label_8.style.left = quantiteMarkerPosition_8 + '%';
+                markers_8.appendChild(label_8);
+                monBouton_8.disabled = false;
+            }
+        }
+
+        function increaseBar_8() {
+            if (originalValue_8 > 0) {
+                var bar_8 = document.getElementById('bar_8');
+                var currentWidth_8 = parseFloat(bar_8.style.width) || 0;
+                if (currentWidth_8 < 100) {
+                    var increaseAmount_8 = 100 / originalValue_8;
+                    var newWidth_8 = currentWidth_8 + increaseAmount_8;
+                    if (newWidth_8 > 100) {
+                        newWidth_8 = 100;
+                    }
+                    bar_8.style.width = newWidth_8 + '%';
+                    updatePercentage_8(newWidth_8);
+                    localStorage.setItem('barWidth_8', newWidth_8);
+                }
+            }
+            updateIndicator_8();
+        }
+
+        function decreaseBar_8() {
+            if (originalValue_8 > 0) {
+                var bar_8 = document.getElementById('bar_8');
+                var currentWidth_8 = parseFloat(bar_8.style.width) || 0;
+                if (currentWidth_8 > 0) {
+                    var decreaseAmount_8 = 100 / originalValue_8;
+                    var newWidth_8 = currentWidth_8 - decreaseAmount_8;
+                    if (newWidth_8 < 0) {
+                        newWidth_8 = 0;
+                    }
+                    bar_8.style.width = newWidth_8 + '%';
+                    updatePercentage_8(newWidth_8);
+                    localStorage.setItem('barWidth_8', newWidth_8);
+                }
+            }
+            updateIndicator_8();
+        }
+
+        document.getElementById('inputRess_8').addEventListener('input', function () {
+            inputRess_8 = this.value;
+            localStorage.setItem('inputRess_8', inputRess_8);
+			document.getElementById('labelRess_8').textContent = document.getElementById('inputRess_8').value;
+        });
+		
+        document.getElementById('designationValue_8').addEventListener('input', function () {
+            designationValue_8 = this.value;
+            localStorage.setItem('designationValue_8', designationValue_8);
+        });
+
+        document.getElementById('date_8').addEventListener('change', function () {
+            var savedDate_8 = this.value;
+            localStorage.setItem('savedDate_8', savedDate_8);
+            updateIndicator_8();
+        });
+
+        document.getElementById('heure_8').addEventListener('change', function () {
+            var savedTime_8 = this.value;
+            localStorage.setItem('savedTime_8', savedTime_8);
+            updateIndicator_8();
+        });
+
+        function updateIndicator_8() {
+            var currentDate_8 = new Date();
+            var selectedDate_8 = new Date(document.getElementById('date_8').value);
+            var selectedTime_8 = document.getElementById('heure_8').value.split(':');
+            var selectedDateTime_8 = new Date(selectedDate_8.getFullYear(), selectedDate_8.getMonth(), selectedDate_8.getDate(), selectedTime_8[0], selectedTime_8[1]);
+            var percentageText_8 = document.getElementById('percentage_8').textContent;
+            var percentageValue_8 = parseInt(percentageText_8);
+            var indicator_8 = document.getElementById('indicator_8');
+            var indicatorR_8 = document.getElementById('indicatorR_8');			
+
+            if (currentDate_8 < selectedDateTime_8) {
+                if (percentageValue_8 < 100) {
+                    indicator_8.className = 'indicator green';
+                    localStorage.setItem('indicatorState_8', 'green');
+                    indicatorR_8.className = 'indicatorR green';					
+                } else if (percentageValue_8 === 100) {
+                    indicator_8.className = 'indicator green';
+                    localStorage.setItem('indicatorState_8', 'green');
+                    indicatorR_8.className = 'indicatorR green';					
+                }
+            } else {
+                if (percentageValue_8 < 100) {
+                    indicator_8.className = 'indicator red';
+                    localStorage.setItem('indicatorState_8', 'red');
+                    indicatorR_8.className = 'indicatorR red';					
+                }
+            }
+        }
+        function updatePercentage_8(width) {
+            var percentageElement_8 = document.getElementById('percentage_8');
+            var percentage_8 = Math.round((width / 100) * 100) + '%';
+            percentageElement_8.textContent = percentage_8;
+			localStorage.setItem('percentage_8', percentage_8);// Sauvegarde localStorage
+        }//*******************************************************************
+
+function verifierHeure_9() {
+            var heureSelectionnee_9 = document.getElementById("heure_9").value;
+            var heureActuelle_9 = new Date().toLocaleTimeString([], {
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+
+            if (heureSelectionnee_9 === heureActuelle_9) {
+                updateIndicator_9();
+                //alert("L'heure sélectionnée est atteinte !");
+                monBouton_9.disabled = true;
+				localStorage.setItem('buttonState_9', 'disabled');// Sauvegarde l'état de monBouton_9
+			   //clearInterval(interval_9); // Arrêter la vérification
+            }
+        }
+        //var interval_9 = setInterval(verifierHeure_9, 60000); // Vérification chaque minute
+		setInterval(verifierHeure_9, 60000); // Vérification chaque minute
+		
+        var originalValue_9;
+		var inputRess_9;
+        var designationValue_9;
+
+        document.addEventListener('DOMContentLoaded', function () {//Ouverture
+            originalValue_9 = parseFloat(localStorage.getItem('inputValue_9')) || 0;
+            inputRess_9 = localStorage.getItem('inputRess_9') || '';
+            designationValue_9 = localStorage.getItem('designationValue_9') || '';
+            var barWidth_9 = parseFloat(localStorage.getItem('barWidth_9')) || 0;
+            var savedDate_9 = localStorage.getItem('savedDate_9') || '';
+            var savedTime_9 = localStorage.getItem('savedTime_9') || '';
+            var indicatorState_9 = localStorage.getItem('indicatorState_9') || '';
+			
+			var savedPercentage_9 = localStorage.getItem('percentage_9');
+			
+            document.getElementById('inputValue_9').value = originalValue_9;
+            document.getElementById('inputRess_9').value = inputRess_9;			
+            document.getElementById('designationValue_9').value = designationValue_9;
+            document.getElementById('date_9').value = savedDate_9;
+            document.getElementById('heure_9').value = savedTime_9;
+
+			createMarkers_9(originalValue_9);
+			//updateBar_9(barWidth_9);
+			if (savedPercentage_9) {// Mettre à jour la barre de progression avec le pourcentage 
+			var percentageElement_9 = document.getElementById('percentage_9');
+			percentageElement_9.textContent = savedPercentage_9;
+			var width = parseInt(savedPercentage_9) || 0;// Mettre à jour barre de progression
+			var bar_9 = document.getElementById('bar_9');
+			bar_9.style.width = width + '%';
+			}
+            if (indicatorState_9 === 'red') {
+                document.getElementById('indicator_9').className = 'indicator red';
+            } else {
+                document.getElementById('indicator_9').className = 'indicator green';
+            }
+			var savedIndicator_9 = localStorage.getItem('indicatorState_9');// Lire la sauvegarde de indicator_9 depuis le localStorage
+			document.getElementById('indicatorR_9').className = savedIndicator_9;// Appliquer la classe sauvegardée à l'élément indicatorR_9
+			//if (!savedIndicator_9) {// Si aucune sauvegarde n'est trouvée, définissez la classe de indicator_9 par défaut
+				//savedIndicator_9 = 'indicator green'; // Valeur par défaut
+			//}
+			var indicator_9 = document.getElementById('indicator_9');// Mettre à jour indicatorR_9 en fonction de la classe de indicator_9
+			if (indicator_9.className === 'indicator green') {
+				document.getElementById('indicatorR_9').className = 'indicator green';
+			} else if (indicator_9.className === 'indicator red') {
+				document.getElementById('indicatorR_9').className = 'indicator red';
+			}
+			var buttonState_9 = localStorage.getItem('buttonState_9');// Charger l'état du bouton depuis le localStorage
+			if (buttonState_9 === 'disabled') {// Vérifier si un état a été sauvegardé
+			monBouton_9.disabled = true;// Désactiver le bouton
+			}
+			document.getElementById('labelRess_9').textContent = document.getElementById('inputRess_9').value;
+			            updateIndicator_9();
+        });
+
+        function updateBar_9(savedBarWidth_9) {
+            var inputValue_9 = document.getElementById('inputValue_9').value;
+            originalValue_9 = parseFloat(inputValue_9);
+            var bar_9 = document.getElementById('bar_9');
+            bar_9.style.width = savedBarWidth_9 + '%';
+            if (!isNaN(originalValue_9) && originalValue_9 > 0) {
+                createMarkers_9(originalValue_9);
+                localStorage.setItem('inputValue_9', originalValue_9);
+            }
+			document.getElementById('percentage_9').innerText = '0%'; // Mettre à jour ID 'percentage_9' pour afficher 0%
+            var percentage_9 = '0%'; // Initialiser la variable percentage_9 à '0%'
+			localStorage.setItem('percentage_9', percentage_9); // Sauvegarde localStorage
+            updateIndicator_9();
+			
+			monBouton_9.disabled = false;
+			localStorage.setItem('buttonState_9', 'visible');// Sauvegarde l'état de monBouton_9
+        }
+        document.getElementById('updateButton_9').addEventListener('click', function () {
+            updateBar_9(0);
+        });
+
+        function createMarkers_9(count_9) {
+            var markers_9 = document.querySelector('.quantite-markers_9');
+            markers_9.innerHTML = '';
+            for (var i_9 = 0; i_9 <= count_9; i_9++) {
+                var quantiteMarkerPosition_9 = (i_9 / count_9) * 100;
+                var marker_9 = document.createElement('div');
+                marker_9.className = 'quantite-marker_9';
+                marker_9.style.left = quantiteMarkerPosition_9 + '%';
+                markers_9.appendChild(marker_9);
+                var label_9 = document.createElement('div');
+                label_9.className = 'quantite-label_9';
+                label_9.textContent = i_9;
+                label_9.style.left = quantiteMarkerPosition_9 + '%';
+                markers_9.appendChild(label_9);
+                monBouton_9.disabled = false;
+            }
+        }
+
+        function increaseBar_9() {
+            if (originalValue_9 > 0) {
+                var bar_9 = document.getElementById('bar_9');
+                var currentWidth_9 = parseFloat(bar_9.style.width) || 0;
+                if (currentWidth_9 < 100) {
+                    var increaseAmount_9 = 100 / originalValue_9;
+                    var newWidth_9 = currentWidth_9 + increaseAmount_9;
+                    if (newWidth_9 > 100) {
+                        newWidth_9 = 100;
+                    }
+                    bar_9.style.width = newWidth_9 + '%';
+                    updatePercentage_9(newWidth_9);
+                    localStorage.setItem('barWidth_9', newWidth_9);
+                }
+            }
+            updateIndicator_9();
+        }
+
+        function decreaseBar_9() {
+            if (originalValue_9 > 0) {
+                var bar_9 = document.getElementById('bar_9');
+                var currentWidth_9 = parseFloat(bar_9.style.width) || 0;
+                if (currentWidth_9 > 0) {
+                    var decreaseAmount_9 = 100 / originalValue_9;
+                    var newWidth_9 = currentWidth_9 - decreaseAmount_9;
+                    if (newWidth_9 < 0) {
+                        newWidth_9 = 0;
+                    }
+                    bar_9.style.width = newWidth_9 + '%';
+                    updatePercentage_9(newWidth_9);
+                    localStorage.setItem('barWidth_9', newWidth_9);
+                }
+            }
+            updateIndicator_9();
+        }
+
+        document.getElementById('inputRess_9').addEventListener('input', function () {
+            inputRess_9 = this.value;
+            localStorage.setItem('inputRess_9', inputRess_9);
+			document.getElementById('labelRess_9').textContent = document.getElementById('inputRess_9').value;
+        });
+		
+        document.getElementById('designationValue_9').addEventListener('input', function () {
+            designationValue_9 = this.value;
+            localStorage.setItem('designationValue_9', designationValue_9);
+        });
+
+        document.getElementById('date_9').addEventListener('change', function () {
+            var savedDate_9 = this.value;
+            localStorage.setItem('savedDate_9', savedDate_9);
+            updateIndicator_9();
+        });
+
+        document.getElementById('heure_9').addEventListener('change', function () {
+            var savedTime_9 = this.value;
+            localStorage.setItem('savedTime_9', savedTime_9);
+            updateIndicator_9();
+        });
+
+        function updateIndicator_9() {
+            var currentDate_9 = new Date();
+            var selectedDate_9 = new Date(document.getElementById('date_9').value);
+            var selectedTime_9 = document.getElementById('heure_9').value.split(':');
+            var selectedDateTime_9 = new Date(selectedDate_9.getFullYear(), selectedDate_9.getMonth(), selectedDate_9.getDate(), selectedTime_9[0], selectedTime_9[1]);
+            var percentageText_9 = document.getElementById('percentage_9').textContent;
+            var percentageValue_9 = parseInt(percentageText_9);
+            var indicator_9 = document.getElementById('indicator_9');
+            var indicatorR_9 = document.getElementById('indicatorR_9');			
+
+            if (currentDate_9 < selectedDateTime_9) {
+                if (percentageValue_9 < 100) {
+                    indicator_9.className = 'indicator green';
+                    localStorage.setItem('indicatorState_9', 'green');
+                    indicatorR_9.className = 'indicatorR green';					
+                } else if (percentageValue_9 === 100) {
+                    indicator_9.className = 'indicator green';
+                    localStorage.setItem('indicatorState_9', 'green');
+                    indicatorR_9.className = 'indicatorR green';					
+                }
+            } else {
+                if (percentageValue_9 < 100) {
+                    indicator_9.className = 'indicator red';
+                    localStorage.setItem('indicatorState_9', 'red');
+                    indicatorR_9.className = 'indicatorR red';					
+                }
+            }
+        }
+        function updatePercentage_9(width) {
+            var percentageElement_9 = document.getElementById('percentage_9');
+            var percentage_9 = Math.round((width / 100) * 100) + '%';
+            percentageElement_9.textContent = percentage_9;
+			localStorage.setItem('percentage_9', percentage_9);// Sauvegarde localStorage
+        }//*******************************************************************
+
+function verifierHeure_10() {
+            var heureSelectionnee_10 = document.getElementById("heure_10").value;
+            var heureActuelle_10 = new Date().toLocaleTimeString([], {
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+
+            if (heureSelectionnee_10 === heureActuelle_10) {
+                updateIndicator_10();
+                //alert("L'heure sélectionnée est atteinte !");
+                monBouton_10.disabled = true;
+				localStorage.setItem('buttonState_10', 'disabled');// Sauvegarde l'état de monBouton_10
+			   //clearInterval(interval_10); // Arrêter la vérification
+            }
+        }
+        //var interval_10 = setInterval(verifierHeure_10, 60000); // Vérification chaque minute
+		setInterval(verifierHeure_10, 60000); // Vérification chaque minute
+		
+        var originalValue_10;
+		var inputRess_10;
+        var designationValue_10;
+
+        document.addEventListener('DOMContentLoaded', function () {//Ouverture
+            originalValue_10 = parseFloat(localStorage.getItem('inputValue_10')) || 0;
+            inputRess_10 = localStorage.getItem('inputRess_10') || '';
+            designationValue_10 = localStorage.getItem('designationValue_10') || '';
+            var barWidth_10 = parseFloat(localStorage.getItem('barWidth_10')) || 0;
+            var savedDate_10 = localStorage.getItem('savedDate_10') || '';
+            var savedTime_10 = localStorage.getItem('savedTime_10') || '';
+            var indicatorState_10 = localStorage.getItem('indicatorState_10') || '';
+			
+			var savedPercentage_10 = localStorage.getItem('percentage_10');
+			
+            document.getElementById('inputValue_10').value = originalValue_10;
+            document.getElementById('inputRess_10').value = inputRess_10;			
+            document.getElementById('designationValue_10').value = designationValue_10;
+            document.getElementById('date_10').value = savedDate_10;
+            document.getElementById('heure_10').value = savedTime_10;
+
+			createMarkers_10(originalValue_10);
+			//updateBar_10(barWidth_10);
+			if (savedPercentage_10) {// Mettre à jour la barre de progression avec le pourcentage 
+			var percentageElement_10 = document.getElementById('percentage_10');
+			percentageElement_10.textContent = savedPercentage_10;
+			var width = parseInt(savedPercentage_10) || 0;// Mettre à jour barre de progression
+			var bar_10 = document.getElementById('bar_10');
+			bar_10.style.width = width + '%';
+			}
+            if (indicatorState_10 === 'red') {
+                document.getElementById('indicator_10').className = 'indicator red';
+            } else {
+                document.getElementById('indicator_10').className = 'indicator green';
+            }
+			var savedIndicator_10 = localStorage.getItem('indicatorState_10');// Lire la sauvegarde de indicator_10 depuis le localStorage
+			document.getElementById('indicatorR_10').className = savedIndicator_10;// Appliquer la classe sauvegardée à l'élément indicatorR_10
+			//if (!savedIndicator_10) {// Si aucune sauvegarde n'est trouvée, définissez la classe de indicator_10 par défaut
+				//savedIndicator_10 = 'indicator green'; // Valeur par défaut
+			//}
+			var indicator_10 = document.getElementById('indicator_10');// Mettre à jour indicatorR_10 en fonction de la classe de indicator_10
+			if (indicator_10.className === 'indicator green') {
+				document.getElementById('indicatorR_10').className = 'indicator green';
+			} else if (indicator_10.className === 'indicator red') {
+				document.getElementById('indicatorR_10').className = 'indicator red';
+			}
+			var buttonState_10 = localStorage.getItem('buttonState_10');// Charger l'état du bouton depuis le localStorage
+			if (buttonState_10 === 'disabled') {// Vérifier si un état a été sauvegardé
+			monBouton_10.disabled = true;// Désactiver le bouton
+			}
+			document.getElementById('labelRess_10').textContent = document.getElementById('inputRess_10').value;
+			            updateIndicator_10();
+        });
+
+        function updateBar_10(savedBarWidth_10) {
+            var inputValue_10 = document.getElementById('inputValue_10').value;
+            originalValue_10 = parseFloat(inputValue_10);
+            var bar_10 = document.getElementById('bar_10');
+            bar_10.style.width = savedBarWidth_10 + '%';
+            if (!isNaN(originalValue_10) && originalValue_10 > 0) {
+                createMarkers_10(originalValue_10);
+                localStorage.setItem('inputValue_10', originalValue_10);
+            }
+			document.getElementById('percentage_10').innerText = '0%'; // Mettre à jour ID 'percentage_10' pour afficher 0%
+            var percentage_10 = '0%'; // Initialiser la variable percentage_10 à '0%'
+			localStorage.setItem('percentage_10', percentage_10); // Sauvegarde localStorage
+            updateIndicator_10();
+			
+			monBouton_10.disabled = false;
+			localStorage.setItem('buttonState_10', 'visible');// Sauvegarde l'état de monBouton_10			
+        }
+        document.getElementById('updateButton_10').addEventListener('click', function () {
+            updateBar_10(0);
+        });
+
+        function createMarkers_10(count_10) {
+            var markers_10 = document.querySelector('.quantite-markers_10');
+            markers_10.innerHTML = '';
+            for (var i_10 = 0; i_10 <= count_10; i_10++) {
+                var quantiteMarkerPosition_10 = (i_10 / count_10) * 100;
+                var marker_10 = document.createElement('div');
+                marker_10.className = 'quantite-marker_10';
+                marker_10.style.left = quantiteMarkerPosition_10 + '%';
+                markers_10.appendChild(marker_10);
+                var label_10 = document.createElement('div');
+                label_10.className = 'quantite-label_10';
+                label_10.textContent = i_10;
+                label_10.style.left = quantiteMarkerPosition_10 + '%';
+                markers_10.appendChild(label_10);
+                monBouton_10.disabled = false;
+            }
+        }
+
+        function increaseBar_10() {
+            if (originalValue_10 > 0) {
+                var bar_10 = document.getElementById('bar_10');
+                var currentWidth_10 = parseFloat(bar_10.style.width) || 0;
+                if (currentWidth_10 < 100) {
+                    var increaseAmount_10 = 100 / originalValue_10;
+                    var newWidth_10 = currentWidth_10 + increaseAmount_10;
+                    if (newWidth_10 > 100) {
+                        newWidth_10 = 100;
+                    }
+                    bar_10.style.width = newWidth_10 + '%';
+                    updatePercentage_10(newWidth_10);
+                    localStorage.setItem('barWidth_10', newWidth_10);
+                }
+            }
+            updateIndicator_10();
+        }
+
+        function decreaseBar_10() {
+            if (originalValue_10 > 0) {
+                var bar_10 = document.getElementById('bar_10');
+                var currentWidth_10 = parseFloat(bar_10.style.width) || 0;
+                if (currentWidth_10 > 0) {
+                    var decreaseAmount_10 = 100 / originalValue_10;
+                    var newWidth_10 = currentWidth_10 - decreaseAmount_10;
+                    if (newWidth_10 < 0) {
+                        newWidth_10 = 0;
+                    }
+                    bar_10.style.width = newWidth_10 + '%';
+                    updatePercentage_10(newWidth_10);
+                    localStorage.setItem('barWidth_10', newWidth_10);
+                }
+            }
+            updateIndicator_10();
+        }
+
+        document.getElementById('inputRess_10').addEventListener('input', function () {
+            inputRess_10 = this.value;
+            localStorage.setItem('inputRess_10', inputRess_10);
+			document.getElementById('labelRess_10').textContent = document.getElementById('inputRess_10').value;
+        });
+		
+        document.getElementById('designationValue_10').addEventListener('input', function () {
+            designationValue_10 = this.value;
+            localStorage.setItem('designationValue_10', designationValue_10);
+        });
+
+        document.getElementById('date_10').addEventListener('change', function () {
+            var savedDate_10 = this.value;
+            localStorage.setItem('savedDate_10', savedDate_10);
+            updateIndicator_10();
+        });
+
+        document.getElementById('heure_10').addEventListener('change', function () {
+            var savedTime_10 = this.value;
+            localStorage.setItem('savedTime_10', savedTime_10);
+            updateIndicator_10();
+        });
+
+        function updateIndicator_10() {
+            var currentDate_10 = new Date();
+            var selectedDate_10 = new Date(document.getElementById('date_10').value);
+            var selectedTime_10 = document.getElementById('heure_10').value.split(':');
+            var selectedDateTime_10 = new Date(selectedDate_10.getFullYear(), selectedDate_10.getMonth(), selectedDate_10.getDate(), selectedTime_10[0], selectedTime_10[1]);
+            var percentageText_10 = document.getElementById('percentage_10').textContent;
+            var percentageValue_10 = parseInt(percentageText_10);
+            var indicator_10 = document.getElementById('indicator_10');
+            var indicatorR_10 = document.getElementById('indicatorR_10');			
+
+            if (currentDate_10 < selectedDateTime_10) {
+                if (percentageValue_10 < 100) {
+                    indicator_10.className = 'indicator green';
+                    localStorage.setItem('indicatorState_10', 'green');
+                    indicatorR_10.className = 'indicatorR green';					
+                } else if (percentageValue_10 === 100) {
+                    indicator_10.className = 'indicator green';
+                    localStorage.setItem('indicatorState_10', 'green');
+                    indicatorR_10.className = 'indicatorR green';					
+                }
+            } else {
+                if (percentageValue_10 < 100) {
+                    indicator_10.className = 'indicator red';
+                    localStorage.setItem('indicatorState_10', 'red');
+                    indicatorR_10.className = 'indicatorR red';					
+                }
+            }
+        }
+        function updatePercentage_10(width) {
+            var percentageElement_10 = document.getElementById('percentage_10');
+            var percentage_10 = Math.round((width / 100) * 100) + '%';
+            percentageElement_10.textContent = percentage_10;
+			localStorage.setItem('percentage_10', percentage_10);// Sauvegarde localStorage
+        }//*******************************************************************
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+<script>// Boucle sur une plage de valeurs pour générer les identifiants des éléments et les ajouter à la liste elementsToDisable
+var menuToggle = document.getElementById('menu-toggle');
+var sidebarWrapper = document.getElementById('sidebar-wrapper');
+var elementsToDisable = [];
+for (var i = 1; i <= 10; i++) {
+    elementsToDisable.push(
+        document.getElementById('inputRess_' + i),	
+        document.getElementById('inputValue_' + i),
+        document.getElementById('updateButton_' + i),
+        document.getElementById('designationValue_' + i),		
+        document.getElementById('date_' + i),
+        document.getElementById('heure_' + i)
+    );
+}
+menuToggle.addEventListener('click', function() {
+    var isMenuOpen = sidebarWrapper.clientWidth !== 0;
+
+    elementsToDisable.forEach(function(element) {
+        element.disabled = isMenuOpen;
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+<!-- <script> -->
+<!-- var textInputs = []; // Initialisation du tableau pour stocker les références des champs de texte -->
+
+<!-- // Boucler à travers les IDs de inputRess_1 à inputRess_10 -->
+<!-- for (var i = 1; i <= 10; i++) { -->
+    <!-- // Construire l'ID de l'élément actuel -->
+    <!-- var inputId = 'inputRess_' + i; -->
+    <!-- // Sélectionner l'élément input avec l'ID actuel -->
+    <!-- var inputElement = document.getElementById(inputId); -->
+    <!-- // Ajouter l'élément input à la liste textInputs -->
+    <!-- textInputs.push(inputElement); -->
+<!-- } -->
+
+<!-- // La fonction handleInputChange reste la même -->
+<!-- function handleInputChange(event) { -->
+    <!-- var inputId = event.target.id; // Récupérer l'identifiant de l'élément modifié -->
+    <!-- var indicatorId = 'indicator_' + inputId.split('_')[1]; // Construire l'identifiant de l'indicateur correspondant -->
+    <!-- var indicatorRId = 'indicatorR_' + inputId.split('_')[1]; // Construire l'identifiant de l'indicateurR correspondant -->
+    
+    <!-- var inputRess = event.target.value; -->
+    <!-- var indicator = document.getElementById(indicatorId); // Sélectionner l'indicateur correspondant -->
+    <!-- var indicatorR = document.getElementById(indicatorRId); // Sélectionner l'indicateurR correspondant -->
+
+    <!-- if (inputRess === '') { -->
+        <!-- indicator.style.opacity = 0; -->
+        <!-- indicatorR.style.opacity = 0; -->
+        <!-- localStorage.setItem(indicatorId + '_opacity', 0); // Sauvegarder l'opacité dans le localStorage -->
+        <!-- localStorage.setItem(indicatorRId + '_opacity', 0); // Sauvegarder l'opacité dans le localStorage pour indicatorR -->
+    <!-- } else { -->
+        <!-- indicator.style.opacity = 1; -->
+        <!-- indicatorR.style.opacity = 1; -->
+        <!-- localStorage.setItem(indicatorId + '_opacity', 1); // Sauvegarder l'opacité dans le localStorage -->
+        <!-- localStorage.setItem(indicatorRId + '_opacity', 1); // Sauvegarder l'opacité dans le localStorage pour indicatorR -->
+    <!-- } -->
+<!-- } -->
+
+<!-- // Ajouter des écouteurs d'événements à chaque champ de texte dans textInputs -->
+<!-- textInputs.forEach(function(input) { -->
+    <!-- input.addEventListener('input', handleInputChange); -->
+<!-- }); -->
+
+
+<!-- window.addEventListener('load', function() { -->
+    <!-- // Récupérer les éléments input de type texte avec les ID de inputRess_1 à inputRess_10 -->
+    <!-- var textInputs = []; -->
+    <!-- for (var i = 1; i <= 10; i++) { -->
+        <!-- var id = 'inputRess_' + i; -->
+        <!-- var inputElement = document.getElementById(id); -->
+        <!-- if (inputElement) { -->
+            <!-- textInputs.push(inputElement); -->
+        <!-- } -->
+    <!-- } -->
+
+    <!-- // Restaurer l'opacité des indicateurs à la réouverture de la page -->
+    <!-- textInputs.forEach(function(input) { -->
+        <!-- var indicatorId = 'indicator_' + input.id.split('_')[1]; -->
+        <!-- var indicatorRId = 'indicatorR_' + input.id.split('_')[1]; -->
+        <!-- var indicator = document.getElementById(indicatorId); -->
+        <!-- var indicatorR = document.getElementById(indicatorRId); -->
+        
+        <!-- var opacity = localStorage.getItem(indicatorId + '_opacity'); -->
+        <!-- if (indicator && opacity !== null) { -->
+            <!-- indicator.style.opacity = opacity; -->
+        <!-- } -->
+
+        <!-- opacity = localStorage.getItem(indicatorRId + '_opacity'); -->
+        <!-- if (indicatorR && opacity !== null) { -->
+            <!-- indicatorR.style.opacity = opacity; -->
+        <!-- } -->
+    <!-- }); -->
+<!-- }); -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- window.addEventListener('load', function() {// Restaurer l'opacité des indicateurs à la réouverture de la page -->
+    <!-- textInputs.forEach(function(input) { -->
+        <!-- var indicatorId = 'indicator_' + input.id.split('_')[1]; // Récupérer l'identifiant de l'indicateur -->
+		
+        <!-- //var indicatorRId = 'indicatorR_' + input.id.split('_')[1]; -->
+		
+        <!-- var indicator = document.getElementById(indicatorId); // Sélectionner l'indicateur correspondant -->
+		
+        <!-- //var indicatorR = document.getElementById(indicatorRId); -->
+		
+        <!-- var opacity = localStorage.getItem(indicatorId + '_opacity'); // Récupérer l'opacité depuis le localStorage -->
+        <!-- if (opacity !== null) { -->
+            <!-- indicator.style.opacity = opacity; // Restaurer l'opacité -->
+			
+            <!-- //indicatorR.style.opacity = opacity;	 -->
+        <!-- } -->
+    <!-- }); -->
+<!-- }); -->
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+		
+		
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/Sidebar-Menu.js"></script>
+
+
+</body>
+
+</html>
